@@ -184,7 +184,7 @@ function StoryDetail({ story }) {
             />
           </div>
 
-          <p className="note">Puedes modificar <strong>"géneros"</strong> y <strong>"etiquetas"</strong> incluso si hay capítulos publicados. Estos cambios no afectan el estado de publicación de los capítulos.</p>
+          <p className="note">Puedes modificar <strong>&quot;géneros&quot;</strong> y <strong>&quot;etiquetas&quot;</strong> incluso si hay capítulos publicados. Estos cambios no afectan el estado de publicación de los capítulos.</p>
         </article>
 
         <article className="card">
@@ -294,7 +294,7 @@ function StoryDetail({ story }) {
           <ChapterCard key={c.id} chapter={c} storyId={story.id} />
         ))}
         {filtered.length === 0 && (
-          <div className="empty">Sin resultados para "{query}"</div>
+          <div className="empty">Sin resultados para &quot;{query}&quot;</div>
         )}
       </section>
 
