@@ -12,11 +12,11 @@ import { stories } from "./storiesData";
 // ------------------------------------
 // Pure helpers for filter/sort (testable)
 // ------------------------------------
-function normalizeStr(s) {
+function normalizeStr(s: any) {
   return (s || "").toString().toLowerCase();
 }
 
-function filterChapters(story, query, onlyPublished, sortBy) {
+function filterChapters(story: any, query: any, onlyPublished: any, sortBy: any) {
   const q = (query || "").trim().toLowerCase();
   let arr = (story?.chapters || []).filter((c) => {
     const hit =
@@ -42,13 +42,13 @@ function filterChapters(story, query, onlyPublished, sortBy) {
 // -------------------------
 // Chip helpers (pure)
 // -------------------------
-function addChip(list, value) {
+function addChip(list: any, value: any) {
   const v = (value || "").trim();
   if (!v) return list || [];
   const exists = (list || []).some((x) => x.toLowerCase() === v.toLowerCase());
   return exists ? list : [...(list || []), v];
 }
-function removeChip(list, value) {
+function removeChip(list: any, value: any) {
   const v = (value || "").toLowerCase();
   return (list || []).filter((x) => x.toLowerCase() !== v);
 }
@@ -56,7 +56,7 @@ function removeChip(list, value) {
 // -------------------------
 // Main Story Detail component
 // -------------------------
-function StoryDetail({ story }) {
+function StoryDetail({ story }: any) {
   // local editable copy to allow in-memory edits
   const [local, setLocal] = useState(() => ({ ...story }));
 
@@ -84,16 +84,16 @@ function StoryDetail({ story }) {
     [local, query, onlyPublished, sortBy]
   );
 
-  function handleAddTag(val) {
+  function handleAddTag(val: any) {
     setLocal((s) => ({ ...s, tags: addChip(s.tags, val), updatedAt: new Date().toISOString() }));
   }
-  function handleRemoveTag(val) {
+  function handleRemoveTag(val: any) {
     setLocal((s) => ({ ...s, tags: removeChip(s.tags, val), updatedAt: new Date().toISOString() }));
   }
-  function handleAddGenre(val) {
+  function handleAddGenre(val: any) {
     setLocal((s) => ({ ...s, genres: addChip(s.genres, val), updatedAt: new Date().toISOString() }));
   }
-  function handleRemoveGenre(val) {
+  function handleRemoveGenre(val: any) {
     setLocal((s) => ({ ...s, genres: removeChip(s.genres, val), updatedAt: new Date().toISOString() }));
   }
 
@@ -303,7 +303,7 @@ function StoryDetail({ story }) {
   );
 }
 
-function ChapterCard({ chapter, storyId }) {
+function ChapterCard({ chapter, storyId }: any) {
   return (
     <article
       className="chapterCard"
@@ -376,7 +376,7 @@ export default function Capitulos({ storyId }: { storyId?: string }) {
 // -------------------------
 // Tiny test suite (console)
 // -------------------------
-function assertEq(label, a, b) {
+function assertEq(label: any, a: any, b: any) {
   const ok = JSON.stringify(a) === JSON.stringify(b);
   console[ok ? "log" : "error"](`${ok ? "✅" : "❌"} ${label}:`, a, "===", b);
   return ok;
@@ -423,10 +423,10 @@ export function runTests() {
 // -------------------------
 // Chip editor component (UI only)
 // -------------------------
-function ChipEditor({ items = [], placeholder, onAdd, onRemove, badgeClass = "", ariaLabel = "" }) {
+function ChipEditor({ items = [], placeholder, onAdd, onRemove, badgeClass = "", ariaLabel = "" }: any) {
   const [value, setValue] = useState("");
 
-  function onKeyDown(e) {
+  function onKeyDown(e: any) {
     if (e.key === "Enter") {
       const v = value.trim();
       if (v) {
