@@ -91,16 +91,16 @@ function StoryDetail({ story }: any) {
   );
 
   function handleAddTag(val: any) {
-    setLocal((s) => ({ ...s, tags: addChip(s.tags, val), updatedAt: new Date().toISOString() }));
+    setLocal((s: any) => ({ ...s, tags: addChip(s.tags, val), updatedAt: new Date().toISOString() }));
   }
   function handleRemoveTag(val: any) {
-    setLocal((s) => ({ ...s, tags: removeChip(s.tags, val), updatedAt: new Date().toISOString() }));
+    setLocal((s: any) => ({ ...s, tags: removeChip(s.tags, val), updatedAt: new Date().toISOString() }));
   }
   function handleAddGenre(val: any) {
-    setLocal((s) => ({ ...s, genres: addChip(s.genres, val), updatedAt: new Date().toISOString() }));
+    setLocal((s: any) => ({ ...s, genres: addChip(s.genres, val), updatedAt: new Date().toISOString() }));
   }
   function handleRemoveGenre(val: any) {
-    setLocal((s) => ({ ...s, genres: removeChip(s.genres, val), updatedAt: new Date().toISOString() }));
+    setLocal((s: any) => ({ ...s, genres: removeChip(s.genres, val), updatedAt: new Date().toISOString() }));
   }
 
   const handleCreateChapter = () => {
@@ -115,7 +115,7 @@ function StoryDetail({ story }: any) {
       isPublished: newChapter.isPublished,
       publishedAt: newChapter.isPublished ? new Date().toISOString() : undefined
     };
-    setLocal((s) => ({
+    setLocal((s: any) => ({
       ...s,
       chapters: [...(s.chapters || []), newCh],
       updatedAt: new Date().toISOString()
