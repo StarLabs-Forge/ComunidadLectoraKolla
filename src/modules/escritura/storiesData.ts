@@ -1,4 +1,27 @@
-export const stories = [
+export interface Chapter {
+  id: string;
+  number: number;
+  title: string;
+  summary: string;
+  isPublished: boolean;
+  publishedAt?: string;
+  content?: string;
+}
+
+export interface Story {
+  id: string;
+  title: string;
+  cover?: string;
+  description: string;
+  author: string;
+  genres: string[];
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  chapters: Chapter[];
+}
+
+export const stories: Story[] = [
   {
     id: "h-001",
     title: "El Castillo sobre la Niebla",
