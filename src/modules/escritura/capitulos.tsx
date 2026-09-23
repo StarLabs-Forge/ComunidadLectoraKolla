@@ -1,10 +1,3 @@
-// @ts-nocheck
-// Este archivo es legacy JS-style (ver nota original abajo: "no TS types") y
-// usa muchas funciones flecha inline (.filter/.map/.some/.sort) cuyo tipo no
-// se puede inferir sin tipar Story/Chapter primero. Se desactiva el chequeo
-// de tipos aqui para no bloquear el build en cada callback nuevo. Pendiente:
-// definir tipos reales y quitar este @ts-nocheck cuando se refactorice.
-
 // Single-file React (no path aliases, no CSS Modules, no TS types)
 // Fix: remove stray CSS outside template literal and correct ChapterCard signature.
 // Keeps palette, animations, editable tags/genres, and in-browser tests.
@@ -31,7 +24,7 @@ function normalizeStr(s: any) {
 
 function filterChapters(story: any, query: any, onlyPublished: any, sortBy: any) {
   const q = (query || "").trim().toLowerCase();
-  let arr = (story?.chapters || []).filter((c) => {
+  let arr = (story?.chapters || []).filter((c: any) => {
     const hit =
       normalizeStr(c.title).includes(q) ||
       normalizeStr(c.summary).includes(q) ||
@@ -41,13 +34,13 @@ function filterChapters(story: any, query: any, onlyPublished: any, sortBy: any)
 
   switch (sortBy) {
     case "num-desc":
-      arr = [...arr].sort((a, b) => b.number - a.number);
+      arr = [...arr].sort((a: any, b: any) => b.number - a.number);
       break;
     case "title":
-      arr = [...arr].sort((a, b) => a.title.localeCompare(b.title));
+      arr = [...arr].sort((a: any, b: any) => a.title.localeCompare(b.title));
       break;
     default:
-      arr = [...arr].sort((a, b) => a.number - b.number);
+      arr = [...arr].sort((a: any, b: any) => a.number - b.number);
   }
   return arr;
 }
@@ -58,12 +51,12 @@ function filterChapters(story: any, query: any, onlyPublished: any, sortBy: any)
 function addChip(list: any, value: any) {
   const v = (value || "").trim();
   if (!v) return list || [];
-  const exists = (list || []).some((x) => x.toLowerCase() === v.toLowerCase());
+  const exists = (list || []).some((x: any) => x.toLowerCase() === v.toLowerCase());
   return exists ? list : [...(list || []), v];
 }
 function removeChip(list: any, value: any) {
   const v = (value || "").toLowerCase();
-  return (list || []).filter((x) => x.toLowerCase() !== v);
+  return (list || []).filter((x: any) => x.toLowerCase() !== v);
 }
 
 // -------------------------
@@ -87,7 +80,7 @@ function StoryDetail({ story }: any) {
 
   const stats = useMemo(() => {
     const total = local?.chapters?.length || 0;
-    const published = (local?.chapters || []).filter((c) => c.isPublished).length;
+    const published = (local?.chapters || []).filter((c: any) => c.isPublished).length;
     const pct = total ? Math.round((published / total) * 100) : 0;
     return { total, published, pct };
   }, [local]);
@@ -141,12 +134,12 @@ function StoryDetail({ story }: any) {
             por <strong>{local.author}</strong>
           </p>
           <div className="badges" aria-label='Géneros y etiquetas'>
-            {(local.genres || []).map((g) => (
+            {(local.genres || []).map((g: any) => (
               <span key={g} className="badgeGenre">
                 {g}
               </span>
             ))}
-            {(local.tags || []).map((t) => (
+            {(local.tags || []).map((t: any) => (
               <span key={t} className="badgeTag">
                 #{t}
               </span>
@@ -303,7 +296,7 @@ function StoryDetail({ story }: any) {
       )}
 
       <section className="chapterGrid">
-        {filtered.map((c) => (
+        {filtered.map((c: any) => (
           <ChapterCard key={c.id} chapter={c} storyId={story.id} />
         ))}
         {filtered.length === 0 && (
@@ -398,25 +391,25 @@ function assertEq(label: any, a: any, b: any) {
 export function runTests() {
   const s = stories[0];
   // 1) By number match
-  const r1 = filterChapters(s, "1", false, "num-asc").map((c) => c.number);
+  const r1 = filterChapters(s, "1", false, "num-asc").map((c: any) => c.number);
   assertEq("match number=1", r1, [1]);
 
   // 2) Only published
-  const r2 = filterChapters(s, "", true, "num-asc").every((c) => c.isPublished === true);
+  const r2 = filterChapters(s, "", true, "num-asc").every((c: any) => c.isPublished === true);
   assertEq("onlyPublished=true filters drafts", r2, true);
 
   // 3) Sort desc
-  const r3 = filterChapters(s, "", false, "num-desc").map((c) => c.number);
+  const r3 = filterChapters(s, "", false, "num-desc").map((c: any) => c.number);
   const sortedDesc = [...(s.chapters || [])].sort((a, b) => b.number - a.number).map((c) => c.number);
   assertEq("sort num-desc", r3, sortedDesc);
 
   // 4) Title sort A–Z
-  const r4 = filterChapters(s, "", false, "title").map((c) => c.title);
+  const r4 = filterChapters(s, "", false, "title").map((c: any) => c.title);
   const titleAZ = [...(s.chapters || [])].sort((a, b) => a.title.localeCompare(b.title)).map((c) => c.title);
   assertEq("sort title A–Z", r4, titleAZ);
 
   // 5) Query by substring in summary
-  const r5 = filterChapters(s, "campus", false, "num-asc").map((c) => c.id);
+  const r5 = filterChapters(s, "campus", false, "num-asc").map((c: any) => c.id);
   assertEq("query substring 'campus'", r5, ["c-001"]);
 
   // 6) addChip avoids duplicates (case-insensitive)
@@ -452,7 +445,7 @@ function ChipEditor({ items = [], placeholder, onAdd, onRemove, badgeClass = "",
   return (
     <div aria-label={ariaLabel}>
       <div className="chips">
-        {items.map((it) => (
+        {items.map((it: any) => (
           <span key={it} className={`chip ${badgeClass}`}>
             {it}
             <button className="chipRemove" title={`Eliminar ${it}`} onClick={() => onRemove(it)} aria-label={`Eliminar ${it}`}>×</button>

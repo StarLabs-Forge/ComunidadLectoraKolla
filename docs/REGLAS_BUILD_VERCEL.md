@@ -167,21 +167,41 @@ function filterChapters(story: any, ...) {
 }
 ```
 
-Corregirlas de a una (`(c: any) => ...`) funciona pero es un ciclo sin fin
-en archivos grandes: cada build revela la siguiente. Para un archivo que
-ya se declaro legacy/sin-tipos desde su comentario de cabecera, la salida
-practica es desactivar el chequeo de tipos en todo el archivo:
+**IMPORTANTE - `@ts-nocheck` esta PROHIBIDO en este proyecto.** El preset
+`next/typescript` de ESLint trae la regla `@typescript-eslint/ban-ts-comment`,
+que bloquea el build si usas `// @ts-nocheck` (o `@ts-ignore`), sin
+importar el motivo. No lo intentes, ya se probo y rompe el build con:
 
-```ts
-// @ts-nocheck
+```
+Error: Do not use "@ts-nocheck" because it alters compilation errors.  @typescript-eslint/ban-ts-comment
 ```
 
-Debe ir como de las primeras lineas del archivo (antes de cualquier
-codigo). Esto es un parche temporal, no una solucion definitiva: la
-correccion real es definir `interface Story { ... }`, `interface Chapter
-{ ... }` y tipar el archivo completo. Mientras eso no se haga, `@ts-nocheck`
-evita que cada callback nuevo tumbe el build en Vercel.
+La solucion real (y la unica que funciona en este repo) es anotar cada
+parametro implicito con `: any` uno por uno, aprovechando que ya se
+desactivo `@typescript-eslint/no-explicit-any` para el archivo (ver regla
+#2):
 
-**Ojo:** `@ts-nocheck` apaga TODO el chequeo de tipos del archivo, no solo
-los `any` implicitos. Usalo solo en archivos ya identificados como
-legacy/prototipo, nunca en codigo nuevo escrito con TypeScript real.
+```ts
+let arr = (story?.chapters || []).filter((c: any) => { ... });
+arr = [...arr].sort((a: any, b: any) => b.number - a.number);
+```
+
+Ojo con la diferencia clave: si el dato viene de un array cuyo tipo
+TypeScript SI puede inferir (por ejemplo, un array literal exportado sin
+anotacion explicita, como `stories` en `storiesData.ts`), sus callbacks
+`.filter/.map/.sort/.some` **no** necesitan `: any` y no van a dar error
+-- ahi TS infiere el tipo solo. El problema aparece unicamente cuando el
+dato pasa por una funcion o prop ya tipada como `any` (parametros `any`,
+componentes con props `: any`, useState inicializado desde algo `any`,
+etc.), porque ahi TS pierde el tipo por completo y no tiene con que
+inferir el callback.
+
+Al revisar un archivo con este problema, buscar TODOS los
+`.filter(`, `.map(`, `.some(`, `.every(`, `.sort(`, `.find(` que reciban
+una funcion flecha con parametros sin tipo, y anotar los que operen sobre
+datos `any` -- no solo el primero que aparezca en el log de Vercel, para
+no repetir el ciclo push-error-fix varias veces.
+
+La correccion real a mediano plazo sigue siendo definir `interface Story
+{ ... }`, `interface Chapter { ... }` y tipar el archivo completo; los
+`: any` son parche mientras tanto.
