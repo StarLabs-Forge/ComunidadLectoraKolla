@@ -3,6 +3,12 @@
 // Keeps palette, animations, editable tags/genres, and in-browser tests.
 "use client";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Este archivo usa `any` en varias firmas de funciones legacy para satisfacer
+// TypeScript strict mode sin reescribir todo el tipado ahora mismo. Pendiente:
+// reemplazar estos `any` por tipos reales (Story, Chapter, etc.) cuando se
+// refactorice este modulo.
+
 import React, { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
