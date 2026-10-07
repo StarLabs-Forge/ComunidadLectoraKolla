@@ -2,35 +2,36 @@
 @import "tw-animate-css";
 
 :root {
-  --main: oklch(0.97 0 0);
-  --main-secondary: oklch(97% 0 0);
-  --main-foreground: oklch(0.925 0 0);
-  --main-muted: oklch(0.96 0 0);
-  --main-background: oklch(0.97 0 0);
-  --main-invert: oklch(0.205 0 0);
+  /* Kolla - Terracota Editorial Palette */
+  --main: #F8F3EE;
+  --main-secondary: #F4E8E4;
+  --main-foreground: #FFFFFF;
+  --main-muted: #E8DED8;
+  --main-background: #F8F3EE;
+  --main-invert: #29282A;
 
-  --primary: oklch(0 0 0);
-  --primary-invert: oklch(1 0 0);
-  --primary-foreground: oklch(37.1% 0 0);
-  --primary-muted: oklch(0.556 0 0);
+  --primary: #A85F55;
+  --primary-invert: #FFFFFF;
+  --primary-foreground: #29282A;
+  --primary-muted: #C98A7D;
 
-  --border: oklch(0.885 0 0);
+  --border: #E8DED8;
 }
 
 .dark {
-  --main: oklch(0.178 0 0);
-  --main-secondary: oklch(0.205 0 0);
-  --main-foreground: oklch(0.269 0 0);
-  --main-muted: oklch(0.168 0 0);
-  --main-background: oklch(0.145 0 0);
-  --main-invert: oklch(0.8 0 0);
+  --main: #1E2021;
+  --main-secondary: #29282A;
+  --main-foreground: #3A3935;
+  --main-muted: #3A3935;
+  --main-background: #1E2021;
+  --main-invert: #F8F3EE;
 
-  --primary: oklch(1 0 0);
-  --primary-invert: oklch(0 0 0);
-  --primary-foreground: oklch(0.97 0 0);
-  --primary-muted: oklch(0.708 0 0);
+  --primary: #C97869;
+  --primary-invert: #1E2021;
+  --primary-foreground: #F8F3EE;
+  --primary-muted: #C97869;
 
-  --border: oklch(0.26 0 0);
+  --border: #3A3935;
 }
 
 @theme inline {

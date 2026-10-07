@@ -1,27 +1,27 @@
-/* Landing Page Styles */
+/* Landing Page Styles - Kolla Terracota Editorial */
 
 :root {
-  --hero-bg: linear-gradient(to bottom, #F0F8F0, white);
-  --hero-text: #165C1E;
-  --hero-highlight: #187A25;
-  --hero-description: #3F875F;
-  --hero-button-primary: #187A25;
-  --hero-button-primary-hover: #4CD23D;
-  --hero-button-secondary: #187A25;
-  --hero-button-secondary-hover: #187A25;
-  --hero-circle-bg: rgba(76, 210, 61, 0.2);
+  --hero-bg: linear-gradient(180deg, #F8F3EE, #FFFFFF);
+  --hero-text: #29282A;
+  --hero-highlight: #A85F55;
+  --hero-description: #5E5855;
+  --hero-button-primary: #A85F55;
+  --hero-button-primary-hover: #934F47;
+  --hero-button-secondary: #A85F55;
+  --hero-button-secondary-hover: #934F47;
+  --hero-circle-bg: rgba(168, 95, 85, 0.08);
 }
 
 .dark {
-  --hero-bg: #1a1a1a;
-  --hero-text: #e0e0e0;
-  --hero-highlight: #4CD23D;
-  --hero-description: #b0b0b0;
-  --hero-button-primary: #4CD23D;
-  --hero-button-primary-hover: #5fd45a;
-  --hero-button-secondary: #4CD23D;
-  --hero-button-secondary-hover: #4CD23D;
-  --hero-circle-bg: rgba(76, 210, 61, 0.4);
+  --hero-bg: linear-gradient(180deg, #1E2021, #29282A);
+  --hero-text: #F8F3EE;
+  --hero-highlight: #C97869;
+  --hero-description: #D4C8C3;
+  --hero-button-primary: #C97869;
+  --hero-button-primary-hover: #D9896E;
+  --hero-button-secondary: #C97869;
+  --hero-button-secondary-hover: #D9896E;
+  --hero-circle-bg: rgba(201, 120, 105, 0.15);
 }
 
 .landing-section {

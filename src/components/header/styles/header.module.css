@@ -1,21 +1,21 @@
 :root {
-  --header-bg: rgba(255, 255, 255, 0.2);
-  --header-text: #187A25;
-  --header-hover: #4CD23D;
-  --header-border: #165C1E;
-  --header-bg-dropdown: white;
-  --header-bg-dropdown-header: #f9fafb;
-  --header-bg-hover: rgba(76, 210, 61, 0.1);
+  --header-bg: rgba(248, 243, 238, 0.95);
+  --header-text: #29282A;
+  --header-hover: #A85F55;
+  --header-border: #E8DED8;
+  --header-bg-dropdown: #FFFFFF;
+  --header-bg-dropdown-header: #F8F3EE;
+  --header-bg-hover: rgba(168, 95, 85, 0.08);
 }
 
 .dark {
-  --header-bg: rgba(0, 0, 0, 0.2);
-  --header-text: #e0e0e0;
-  --header-hover: #4CD23D;
-  --header-border: #4CD23D;
-  --header-bg-dropdown: #1a1a1a;
-  --header-bg-dropdown-header: #2a2a2a;
-  --header-bg-hover: rgba(76, 210, 61, 0.2);
+  --header-bg: rgba(30, 32, 33, 0.95);
+  --header-text: #F8F3EE;
+  --header-hover: #C97869;
+  --header-border: #3A3935;
+  --header-bg-dropdown: #29282A;
+  --header-bg-dropdown-header: #1E2021;
+  --header-bg-hover: rgba(201, 120, 105, 0.12);
 }
 
 .header {
