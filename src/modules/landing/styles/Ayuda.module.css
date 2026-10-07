@@ -12,7 +12,7 @@
 
 .mainTitle {
   font-size: 3rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #4CD23D;
+  color: #C98A7D;
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -35,9 +35,9 @@
 .tabButton {
   padding: 0.75rem 2rem;
   background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #187A25;
+  border: 2px solid #A85F55;
   border-radius: 25px;
-  color: #187A25;
+  color: #A85F55;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -45,13 +45,13 @@
 }
 
 .tabButton:hover {
-  background: #187A25;
+  background: #A85F55;
   color: white;
   transform: translateY(-2px);
 }
 
 .activeTab {
-  background: #187A25;
+  background: #A85F55;
   color: white;
   box-shadow: 0 4px 15px rgba(24, 122, 37, 0.3);
 }
@@ -94,7 +94,7 @@
 
 .faqQuestion {
   font-size: 1.25rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -125,7 +125,7 @@
 
 .contactCard h2 {
   font-size: 2rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -147,7 +147,7 @@
 .formGroup label {
   display: block;
   font-weight: 600;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 0.5rem;
 }
 
@@ -165,7 +165,7 @@
 .formInput:focus,
 .formTextarea:focus {
   outline: none;
-  border-color: #4CD23D;
+  border-color: #C98A7D;
   box-shadow: 0 0 0 3px rgba(76, 210, 61, 0.1);
 }
 
@@ -177,7 +177,7 @@
 .submitButton {
   width: 100%;
   padding: 1rem;
-  background: #187A25;
+  background: #A85F55;
   color: white;
   border: none;
   border-radius: 8px;
@@ -188,7 +188,7 @@
 }
 
 .submitButton:hover {
-  background: #4CD23D;
+  background: #C98A7D;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(24, 122, 37, 0.3);
 }

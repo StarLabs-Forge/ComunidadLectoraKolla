@@ -1,11 +1,11 @@
 .menuTrigger {
-  color: #187A25;
+  color: #A85F55;
   background: transparent;
   font-size: 1.125rem;
 }
 
 .menuTrigger:hover {
-  color: #4CD23D;
+  color: #C98A7D;
 }
 
 .menuTrigger[data-state="open"] {
@@ -15,7 +15,7 @@
 .menuContent {
   width: 14rem;
   background: white;
-  border: 1px solid #165C1E;
+  border: 1px solid #934F47;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   left: 0;
 }
@@ -29,7 +29,7 @@
 .contentTitle {
   font-size: 1.125rem;
   font-weight: bold;
-  color: #187A25;
+  color: #A85F55;
 }
 
 .menuList {
@@ -43,10 +43,10 @@
   display: block;
   width: 100%;
   padding: 1rem;
-  color: #187A25;
+  color: #A85F55;
 }
 
 .menuLink:hover {
   background: rgba(76, 210, 61, 0.1);
-  color: #4CD23D;
+  color: #C98A7D;
 }

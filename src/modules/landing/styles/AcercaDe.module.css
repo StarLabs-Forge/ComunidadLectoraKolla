@@ -31,7 +31,7 @@
 
 .mainTitle {
   font-size: 3rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #4CD23D;
+  color: #C98A7D;
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -83,7 +83,7 @@
 
 .card h2 {
   font-size: 1.75rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 600;
 }

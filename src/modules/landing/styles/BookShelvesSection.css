@@ -1,7 +1,7 @@
 :root {
   --book-shelves-bg: #f9f9f9;
-  --book-shelves-text: #165C1E;
-  --book-shelves-highlight: #187A25;
+  --book-shelves-text: #934F47;
+  --book-shelves-highlight: #A85F55;
   --book-shelves-shelf-bg: #8b4513;
   --book-shelves-shelf-border: #654321;
 }
@@ -9,7 +9,7 @@
 .dark {
   --book-shelves-bg: #1a1a1a;
   --book-shelves-text: #e0e0e0;
-  --book-shelves-highlight: #4CD23D;
+  --book-shelves-highlight: #C98A7D;
   --book-shelves-shelf-bg: #654321;
   --book-shelves-shelf-border: #8b4513;
 }

@@ -18,7 +18,7 @@
 
 .mainTitle {
   font-size: 3rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #4CD23D;
+  color: #C98A7D;
   font-weight: 300;
   margin-bottom: 0;
   max-width: 600px;
@@ -40,7 +40,7 @@
 
 .sectionTitle {
   font-size: 2.5rem;
-  color: #187A25;
+  color: #A85F55;
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 600;
@@ -86,14 +86,14 @@
 
 .teamName {
   font-size: 1.5rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .teamRole {
   font-size: 1.1rem;
-  color: #4CD23D;
+  color: #C98A7D;
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -115,7 +115,7 @@
 
 .skillTag {
   background: rgba(24, 122, 37, 0.1);
-  color: #187A25;
+  color: #A85F55;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.875rem;
@@ -129,14 +129,14 @@
 }
 
 .socialLink {
-  color: #187A25;
+  color: #A85F55;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .socialLink:hover {
-  color: #4CD23D;
+  color: #C98A7D;
 }
 
 .timeline {
@@ -152,7 +152,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #187A25, #4CD23D);
+  background: linear-gradient(to bottom, #A85F55, #C98A7D);
   transform: translateX(-50%);
 }
 
@@ -186,7 +186,7 @@
 .timelineIcon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #187A25, #4CD23D);
+  background: linear-gradient(135deg, #A85F55, #C98A7D);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -209,7 +209,7 @@
 }
 
 .timelineYear {
-  color: #4CD23D;
+  color: #C98A7D;
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -217,7 +217,7 @@
 
 .timelineTitle {
   font-size: 1.25rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -269,7 +269,7 @@
 
 .valueTitle {
   font-size: 1.25rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -296,7 +296,7 @@
 
 .joinCard h3 {
   font-size: 1.5rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -326,7 +326,7 @@
 
 .ctaSection h2 {
   font-size: 2.5rem;
-  color: #187A25;
+  color: #A85F55;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -348,7 +348,7 @@
 }
 
 .primaryButton {
-  background: #187A25;
+  background: #A85F55;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -360,15 +360,15 @@
 }
 
 .primaryButton:hover {
-  background: #4CD23D;
+  background: #C98A7D;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(24, 122, 37, 0.3);
 }
 
 .secondaryButton {
   background: transparent;
-  color: #187A25;
-  border: 2px solid #187A25;
+  color: #A85F55;
+  border: 2px solid #A85F55;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
@@ -378,7 +378,7 @@
 }
 
 .secondaryButton:hover {
-  background: #187A25;
+  background: #A85F55;
   color: white;
   transform: translateY(-2px);
 }

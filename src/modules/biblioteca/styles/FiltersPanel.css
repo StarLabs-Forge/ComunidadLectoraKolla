@@ -1,11 +1,12 @@
-/* FiltersPanel.css */
+/* FiltersPanel.css - Kolla Terracota Editorial */
 .filters-panel {
   position: sticky;
   top: 1rem; /* 4 */
-  background-color: rgb(23 23 23); /* neutral-900 */
-  border: 1px solid rgb(64 64 64); /* neutral-700 */
+  background-color: #FFFFFF;
+  border: 1px solid #E8DED8;
   border-radius: 1rem; /* 2xl */
   padding: 1rem; /* 4 */
+  box-shadow: 0 4px 18px rgba(41, 40, 42, 0.06);
 }
 
 .filters-panel-button {
@@ -28,30 +29,33 @@
   font-size: 0.875rem; /* sm */
   line-height: 1.25rem; /* 5 */
   margin-bottom: 0.25rem; /* 1 */
-  color: rgb(148 163 184); /* neutral-400 */
+  color: #A69B96;
 }
 
 .filters-panel-input {
   width: 100%;
-  background-color: rgb(38 38 38); /* neutral-800 */
-  border: 1px solid rgb(64 64 64); /* neutral-700 */
+  background-color: #F8F3EE;
+  border: 1px solid #E8DED8;
   border-radius: 0.75rem; /* xl */
   padding-left: 0.75rem; /* 3 */
   padding-right: 0.75rem; /* 3 */
   padding-top: 0.5rem; /* 2 */
   padding-bottom: 0.5rem; /* 2 */
   outline: none;
+  color: #29282A;
 }
 
 .filters-panel-input:focus {
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4); /* focus:ring-2 focus:ring-emerald-500/40 */
+  box-shadow: 0 0 0 2px rgba(168, 95, 85, 0.15);
+  border-color: #A85F55;
 }
 
 .filters-panel-section-title {
   font-size: 0.875rem; /* sm */
   line-height: 1.25rem; /* 5 */
   margin-bottom: 0.5rem; /* 2 */
-  color: rgb(148 163 184); /* neutral-400 */
+  color: #5E5855;
+  font-weight: 600;
 }
 
 .filters-panel-chips {
