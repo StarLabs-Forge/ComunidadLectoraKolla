@@ -180,7 +180,7 @@ export default function AdminPanelPage() {
                         onClick={() => toggleActive(u.id, u.is_active)}
                         disabled={!!actionLoading[u.id]}
                         className={`px-3 py-1 rounded-full text-sm border ${
-                          u.is_active ? 'bg-transparent border-green-500' : 'bg-red-600'
+                          u.is_active ? 'bg-transparent border-[#4F8068]' : 'bg-[#B85C5C]'
                         }`}
                       >
                         {actionLoading[u.id] ? '…' : u.is_active ? 'Activo' : 'Inactivo'}

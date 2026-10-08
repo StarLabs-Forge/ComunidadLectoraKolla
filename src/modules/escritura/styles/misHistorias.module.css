@@ -1,6 +1,6 @@
 :root {
   --bg: #0b1220; --surface:#111a2b; --surface-2:#0e1726; --text:#edf2ff; --muted:#a5b3d6;
-  --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#3ddc97; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
+  --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#4F8068; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
 }
 @media (prefers-color-scheme: light){
   :root{ --bg:#f6f8ff; --surface:#ffffff; --surface-2:#f1f5ff; --text:#0e1726; --muted:#4b5563; --stroke:rgba(0,0,0,0.08); }
@@ -182,7 +182,7 @@
     color: #fff;
   }
   .save:hover {
-    background: #2ca866;
+    background: #4F8068;
   }
 
   .cancel {

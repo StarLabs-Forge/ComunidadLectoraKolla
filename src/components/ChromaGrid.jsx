@@ -33,8 +33,8 @@ export const ChromaGrid = ({
       title: 'Jordan Chen',
       subtitle: 'DevOps Engineer',
       handle: '@jordanchen',
-      borderColor: '#10B981',
-      gradient: 'linear-gradient(210deg, #10B981, #000)',
+      borderColor: '#4F8068',
+      gradient: 'linear-gradient(210deg, #4F8068, #000)',
       url: 'https://linkedin.com/in/'
     },
     {

@@ -9,7 +9,7 @@
 
 :root{
     --bg: #0b1220; --surface:#111a2b; --surface-2:#0e1726; --text:#edf2ff; --muted:#a5b3d6;
-    --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#3ddc97; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
+    --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#4F8068; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
   }
   
   /* -------------------------------
@@ -93,7 +93,7 @@
   .aiBtn.active{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); border-color:transparent; color:var(--bg); box-shadow:0 6px 22px rgba(110,231,255,0.28); }
   
   /* Variantes semánticas */
-  .aiApplyBtn{ background: linear-gradient(90deg, var(--ok), #2dbf93); border-color: transparent; color: var(--bg); }
+  .aiApplyBtn{ background: linear-gradient(90deg, var(--ok), #4F8068); border-color: transparent; color: var(--bg); }
   .aiGenerateBtn{ background: linear-gradient(90deg, var(--brand), var(--brand-2)); border-color: transparent; color: var(--bg); }
   
   /* KOLLA IA toggle (botón único abrir/cerrar) */

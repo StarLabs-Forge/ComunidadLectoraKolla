@@ -1,6 +1,6 @@
 :root {
   --bg: #0b1220; --surface:#111a2b; --surface-2:#0e1726; --text:#edf2ff; --muted:#a5b3d6;
-  --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#3ddc97; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
+  --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#4F8068; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
 }
 @media (prefers-color-scheme: light){
   :root{ --bg:#f6f8ff; --surface:#ffffff; --surface-2:#f1f5ff; --text:#0e1726; --muted:#4b5563; --stroke:rgba(0,0,0,0.08); }
@@ -42,12 +42,12 @@
 .chapterGrid{ max-width:1100px; margin:0 auto; padding: 0 20px 50px; display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:14px }
 .chapterCard{ background: linear-gradient(180deg, var(--surface), var(--surface-2)); border:1px solid var(--stroke); border-radius:16px; padding:14px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; animation: fadeUp .4s ease-out both; outline:none; }
 .chapterCard:hover, .chapterCard:focus{ transform: translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,.25); border-color: #2a8db0; }
-.chapterCard[data-published="true"]{ border-color: #2dbf93; }
+.chapterCard[data-published="true"]{ border-color: #4F8068; }
 .chapterHeader{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px }
 .chNumber{ font-weight:700; color:var(--brand-2) }
 .chTitle{ margin:0; font-size:1.05rem }
 .badgeOk, .badgeDraft{ padding:4px 8px; border-radius:999px; font-size:.8rem; border:1px solid var(--stroke) }
-.badgeOk{ background: rgba(61,220,151,.2); color:#3ddc97 }
+.badgeOk{ background: rgba(79, 128, 104,.2); color:#4F8068 }
 .badgeDraft{ background: rgba(255,176,32,.2); color:#ffb020 }
 .chSummary{ color:var(--muted); margin:.5rem 0 .75rem }
 .chFooter{ display:flex; align-items:center; justify-content:space-between; gap:8px }
@@ -89,7 +89,7 @@
 .btn:hover{ background: rgba(110,231,255,.1) }
 .btn:active{ transform: translateY(1px) }
 .create{ background: linear-gradient(90deg, var(--brand), var(--brand-2)); color: var(--bg); border-color: var(--brand) }
-.save{ background: linear-gradient(90deg, var(--ok), #2dbf93); color: var(--bg); border-color: var(--ok) }
+.save{ background: linear-gradient(90deg, var(--ok), #4F8068); color: var(--bg); border-color: var(--ok) }
 .cancel{ background: transparent; border-color: var(--stroke); color:var(--muted) }
 .cancel:hover{ background: rgba(255,176,32,.1); color: var(--warn) }
 
@@ -265,8 +265,8 @@
 }
 
 .storyStatusToggle input[type="checkbox"]:checked {
-  background: var(--accent, #4CAF50);
-  border-color: var(--accent, #4CAF50);
+  background: var(--accent, #4F8068);
+  border-color: var(--accent, #4F8068);
 }
 
 .storyStatusToggle input[type="checkbox"]::after {

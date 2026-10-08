@@ -63,7 +63,7 @@
 .chFooter { display:flex; justify-content:space-between; align-items:center; gap:8px; }
 
 /* badges */
-.badgeOk { background: rgba(61,220,151,0.12); padding:6px 8px; border-radius:999px; color: #3ddc97; border:1px solid rgba(61,220,151,0.18); }
+.badgeOk { background: rgba(79, 128, 104,0.12); padding:6px 8px; border-radius:999px; color: #4F8068; border:1px solid rgba(79, 128, 104,0.18); }
 .badgeDraft { background: rgba(255,176,32,0.08); padding:6px 8px; border-radius:999px; color: #ffb020; border:1px solid rgba(255,176,32,0.12); }
 
 /* Buttons */

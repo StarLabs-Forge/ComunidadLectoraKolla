@@ -9,21 +9,21 @@
 }
 
 .menuTrigger[data-state="open"] {
-  background: rgba(44, 142, 44, 0.1);
+  background: rgba(168, 95, 85, 0.1);
 }
 
 .menuContent {
   width: 14rem;
   background: white;
-  border: 1px solid #934F47;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  left: 0;
+  border: 1px solid #E8DED8;
+  box-shadow: 0 10px 30px rgba(41, 40, 42, 0.08);
+  border-radius: 14px;
 }
 
 .contentHeader {
   padding: 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  background: #f9fafb;
+  border-bottom: 1px solid #E8DED8;
+  background: #F4E8E4;
 }
 
 .contentTitle {
@@ -47,6 +47,6 @@
 }
 
 .menuLink:hover {
-  background: rgba(76, 210, 61, 0.1);
+  background: rgba(168, 95, 85, 0.1);
   color: #C98A7D;
 }

@@ -39,13 +39,13 @@ const BookGallerySection: React.FC = () => {
     { src: LIBRO8.src, alt: 'Libro 8' },
   ];
 
-  const overlayBlurColor = theme === 'dark' ? '#1a1a1a' : '#F0F8F0';
+  const overlayBlurColor = theme === 'dark' ? '#1a1a1a' : '#F8F3EE';
 
   return (
     <section className="book-gallery-section">
       <div className="book-gallery-container">
         <h2 className="book-gallery-title">Galería de Libros</h2>
-        <div style={{ filter: 'sepia(0.4) hue-rotate(90deg) saturate(1.3) brightness(1.1)', height: '500px' }}>
+        <div style={{ height: '500px' }}>
           <DomeGallery
             images={bookImages}
             grayscale={false}

@@ -19,7 +19,7 @@
   width: 100%;
   padding: 12px 13px;
   border-radius: 10px;
-  border: 1px solid rgba(21,78,36,0.18);
+  border: 1px solid rgba(168, 95, 85,0.18);
   background: color-mix(in srgb, var(--surface), black 0%);
   color: var(--text);
   outline: none;
@@ -66,16 +66,16 @@
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary), black 12%));
   color: #fff;
-  box-shadow: 0 8px 24px rgba(43,191,89,0.3);
+  box-shadow: 0 8px 24px rgba(168, 95, 85,0.3);
 }
 .btn-primary:hover { transform: translateY(-1px); }
 
 .btn-ghost {
   background: transparent;
   color: var(--text);
-  border: 1px solid rgba(21,78,36,0.20);
+  border: 1px solid rgba(168, 95, 85,0.20);
 }
-.btn-ghost:hover { background: rgba(21,78,36,0.06); }
+.btn-ghost:hover { background: rgba(168, 95, 85,0.06); }
 
 .divider {
   display: grid; grid-auto-flow: column; align-items: center; gap: 10px;
@@ -83,7 +83,7 @@
 }
 .divider::before, .divider::after {
   content: "";
-  height: 1px; background: rgba(21,78,36,0.18);
+  height: 1px; background: rgba(168, 95, 85,0.18);
 }
 
 .error {

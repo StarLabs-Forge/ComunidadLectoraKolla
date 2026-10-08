@@ -114,7 +114,7 @@
 }
 
 .skillTag {
-  background: rgba(24, 122, 37, 0.1);
+  background: rgba(168, 95, 85, 0.1);
   color: #A85F55;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -194,7 +194,7 @@
   font-size: 1.5rem;
   position: relative;
   z-index: 2;
-  box-shadow: 0 4px 15px rgba(24, 122, 37, 0.3);
+  box-shadow: 0 4px 15px rgba(168, 95, 85, 0.3);
 }
 
 .timelineContent {
@@ -316,7 +316,7 @@
 }
 
 .ctaSection {
-  background: rgba(24, 122, 37, 0.1);
+  background: rgba(168, 95, 85, 0.1);
   border-radius: 16px;
   padding: 4rem 2rem;
   text-align: center;
@@ -362,7 +362,7 @@
 .primaryButton:hover {
   background: #C98A7D;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(24, 122, 37, 0.3);
+  box-shadow: 0 4px 15px rgba(168, 95, 85, 0.3);
 }
 
 .secondaryButton {

@@ -100,7 +100,7 @@
   width: min(550px, 90vw); /* Responsive width */
   background: var(--header-bg-dropdown);
   border: 1px solid var(--header-border);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(41, 40, 42, 0.08);
   z-index: 50;
   border-radius: 0.375rem;
   overflow: hidden;
@@ -116,7 +116,7 @@
 
 .dropdownHeader {
   padding: 1rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #E8DED8;
   background: var(--header-bg-dropdown-header);
 }
 
@@ -167,7 +167,7 @@
   width: min(256px, 90vw);
   background: var(--header-bg-dropdown);
   border: 1px solid var(--header-border);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(41, 40, 42, 0.08);
   z-index: 50;
   border-radius: 0.375rem;
   overflow: hidden;
@@ -243,7 +243,7 @@
   }
 
   .logoContainer {
-    background-color: rgba(76, 210, 61, 0.1);
+    background-color: rgba(168, 95, 85, 0.1);
     padding: 0.5rem;
     border-radius: 0.375rem;
   }
@@ -288,7 +288,7 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #3F875F;
+  color: #A85F55;
   height: 1rem;
   width: 1rem;
 }
@@ -298,7 +298,7 @@
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-color: #2C8E2C;
+  border-color: #A85F55;
 }
 
 .searchInput:focus {
@@ -387,7 +387,7 @@
   width: min(256px, 90vw);
   background: var(--header-bg-dropdown);
   border: 1px solid var(--header-border);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(41, 40, 42, 0.08);
   border-radius: 0.375rem;
   overflow: hidden;
 }
