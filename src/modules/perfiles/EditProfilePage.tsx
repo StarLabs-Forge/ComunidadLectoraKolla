@@ -170,10 +170,10 @@ export default function EditProfilePage() {
             <input value={profile?.username ?? ''} disabled className="input disabled" />
 
             <label className="label">Nombre para mostrar</label>
-            <input value={profile?.display_name ?? ''} onChange={(e) => setProfile({ ...profile, display_name: e.target.value })} className="input" />
+            <input value={profile?.display_name ?? ''} onChange={(e) => setProfile((p) => (p ? { ...p, display_name: e.target.value } : p))} className="input" />
 
             <label className="label">Bio</label>
-            <textarea value={profile?.bio ?? ''} onChange={(e) => setProfile({ ...profile, bio: e.target.value })} rows={4} className="textarea" />
+            <textarea value={profile?.bio ?? ''} onChange={(e) => setProfile((p) => (p ? { ...p, bio: e.target.value } : p))} rows={4} className="textarea" />
 
             <div className="row-between">
               <div className="meta">Última actualización: {profile?.updated_at ? new Date(profile.updated_at).toLocaleString() : '—'}</div>

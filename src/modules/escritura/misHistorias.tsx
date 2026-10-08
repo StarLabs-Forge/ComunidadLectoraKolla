@@ -155,7 +155,7 @@ export default function MisHistorias() {
         }
 
         const { data, error } = await supabase
-          .from<StoryRow>('stories')
+          .from('stories')
           .select('*')
           .eq('author_id', user.id)
           .is('deleted_at', null)
@@ -167,7 +167,7 @@ export default function MisHistorias() {
           console.error('Error cargando historias:', error);
           setStories([]);
         } else {
-          setStories(data ?? []);
+          setStories((data ?? []) as StoryRow[]);
         }
       } catch (err) {
         console.error(err);
@@ -237,10 +237,10 @@ export default function MisHistorias() {
       if (error) throw error;
 
       // OK: la BD hizo la cascada atómica
-    } catch (err: any) {
+    } catch (err) {
       console.error('RPC soft-delete failed:', err);
       // show helpful message
-      const msg = err?.message ?? JSON.stringify(err);
+      const msg = err instanceof Error ? err.message : JSON.stringify(err);
       alert('No se pudo eliminar la historia: ' + msg + '. Revirtiendo cambios en la UI.');
       setStories(prevStories); // revertir UI
     } finally {

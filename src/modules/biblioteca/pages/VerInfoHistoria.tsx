@@ -71,7 +71,7 @@ const VerInfoHistoria: React.FC<Props> = ({ storyId: propStoryId }) => {
       try {
         // 1) Obtener historia
         const { data: storyData, error: storyErr } = await supabase
-          .from<Story>("stories")
+          .from("stories")
           .select("id, title, description, cover_url, author_id")
           .eq("id", storyId)
           .single();
@@ -81,16 +81,16 @@ const VerInfoHistoria: React.FC<Props> = ({ storyId: propStoryId }) => {
         }
 
         if (!mounted) return;
-        setStory(storyData);
+        setStory(storyData as Story);
 
         // 2) Obtener autor
         const { data: authorData } = await supabase
-          .from<Profile>("profiles")
+          .from("profiles")
           .select("id, display_name, avatar_url")
-          .eq("id", storyData.author_id)
+          .eq("id", (storyData as Story).author_id)
           .single();
 
-        if (mounted) setAuthor(authorData ?? null);
+        if (mounted) setAuthor((authorData as Profile | null) ?? null);
 
         // 3) Obtener Tags + Géneros (tags.type)
         const { data: tagData } = await supabase
@@ -100,7 +100,7 @@ const VerInfoHistoria: React.FC<Props> = ({ storyId: propStoryId }) => {
 
         if (mounted && Array.isArray(tagData)) {
           setTags(
-            tagData.map((t: any) => ({
+            (tagData as unknown as Array<{ tags: TagData }>).map((t) => ({
               id: t.tags.id,
               name: t.tags.name,
               type: t.tags.type,
@@ -110,22 +110,22 @@ const VerInfoHistoria: React.FC<Props> = ({ storyId: propStoryId }) => {
 
         // 4) Recomendaciones
         const { data: recData } = await supabase
-          .from<Story>("stories")
+          .from("stories")
           .select("id, title, cover_url, author_id")
-          .eq("author_id", storyData.author_id)
-          .neq("id", storyData.id)
+          .eq("author_id", (storyData as Story).author_id)
+          .neq("id", (storyData as Story).id)
           .limit(6);
 
-        if (mounted) setRecs(recData ?? []);
+        if (mounted) setRecs((recData ?? []) as Story[]);
 
         // 5) Capítulos
         const { data: chapterData } = await supabase
-          .from<Chapter>("chapters")
+          .from("chapters")
           .select("id, title, chapter_number, is_published, published_at")
           .eq("story_id", storyId)
           .order("chapter_number", { ascending: true });
 
-        if (mounted) setChapters(chapterData ?? []);
+        if (mounted) setChapters((chapterData ?? []) as Chapter[]);
 
         setError(null);
       } catch (err: unknown) {

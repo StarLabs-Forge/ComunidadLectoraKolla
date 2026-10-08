@@ -8,7 +8,7 @@ import styles from "../styles/reset.module.css";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-export default function ResetForm(): JSX.Element {
+export default function ResetForm(): React.JSX.Element {
   const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");

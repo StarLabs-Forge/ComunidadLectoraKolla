@@ -55,13 +55,13 @@ export default function LeerPage() {
 
     (async () => {
       const { data, error } = await supabase
-        .from<Chapter>('chapters')
+        .from('chapters')
         .select('*')
         .eq('story_id', storyId)
         .order('chapter_number', { ascending: true });
 
       if (!error && data) {
-        setChapters(data);
+        setChapters(data as Chapter[]);
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
           try {
@@ -100,7 +100,7 @@ export default function LeerPage() {
             chapter_id: chapterId,
             percentage: overall,
           },
-          { onConflict: ['user_id', 'story_id'] }
+          { onConflict: 'user_id,story_id' }
         );
       }
     },
@@ -163,7 +163,7 @@ export default function LeerPage() {
       <div className="leer-book-progress">
         <small>Progreso del libro</small>
         <div className="leer-bar-row">
-          <div className="leer-progress" style={{ ['--progress' as any]: `${bookPercentage}%` }}></div>
+          <div className="leer-progress" style={{ ['--progress' as string]: `${bookPercentage}%` }}></div>
           <span className="leer-pct">{bookPercentage}%</span>
         </div>
       </div>
@@ -208,7 +208,7 @@ export default function LeerPage() {
 
           <div className="leer-chapter-progress">
             <small>Progreso del capítulo</small>
-            <div className="leer-progress" style={{ ['--progress' as any]: `${chapterPercentage}%` }}></div>
+            <div className="leer-progress" style={{ ['--progress' as string]: `${chapterPercentage}%` }}></div>
 
             <div className="leer-save-wrap">
               {/*<button className="outline glass" onClick={saveManual}>Guardar</button>

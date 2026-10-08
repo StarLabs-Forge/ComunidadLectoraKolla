@@ -1,7 +1,7 @@
 // app/biblioteca/obra/[id]/page.tsx
 import { createClient } from "@supabase/supabase-js";
 
-export default async function Page(props: any) {
+export default async function Page(props: { params: Promise<{ id: string }> }) {
   // 🔥 SOLUCIÓN CRUCIAL
   const params = await props.params;
   const id = params.id;

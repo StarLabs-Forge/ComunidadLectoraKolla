@@ -194,7 +194,7 @@ useEffect(() => {
             onToggleTag={(t) =>
               setTags((s) => (s.has(t) ? new Set(Array.from(s).filter((x) => x !== t)) : new Set(s).add(t)))
             }
-            genreFromUrl={genre}
+            genreFromUrl={genre ? { id: genre, name: displayGenre ?? genre } : null}
           />
 
           {/* Grid de resultados */}

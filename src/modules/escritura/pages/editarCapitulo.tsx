@@ -227,7 +227,7 @@ export default function EditarCapitulo({ storyId, chapterId }: { storyId: string
                 <div className="aiTextAreaWrap">
                   {AITextCorrector ? (
                     <AITextCorrector
-                      originalText={localContent}
+                      initialText={localContent}
                       onApply={(corrected: string) => handleApplyAICorrection(corrected)}
                     />
                   ) : (

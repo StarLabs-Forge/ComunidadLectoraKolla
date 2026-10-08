@@ -69,7 +69,7 @@ export default function StoryDetail({ story, refreshStory }: StoryDetailProps) {
       if (error) throw error;
       if (data) {
         const mapped = mapStoryRowToLocal({ ...data, chapters: local.chapters });
-        setLocal(mapped);
+        setLocal(mapped as Story);
         if (typeof refreshStory === 'function') refreshStory();
       }
     } catch (err) {
@@ -240,7 +240,7 @@ export default function StoryDetail({ story, refreshStory }: StoryDetailProps) {
 
       <section className="chapterGrid">
         {filtered.map((c) => (
-          <ChapterCard key={c.id} chapter={c} storyId={local.id} />
+          <ChapterCard key={c.id} chapter={c as React.ComponentProps<typeof ChapterCard>['chapter']} storyId={local.id} />
         ))}
         {filtered.length === 0 && <div className="empty">Sin resultados para &#34;{query}&#34;</div>}
       </section>

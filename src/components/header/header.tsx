@@ -144,8 +144,8 @@ const Header: React.FC = () => {
               <DropdownMenuTrigger asChild>
                 <button className="relative h-8 w-8 rounded-full border-none bg-transparent hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src={user.photoURL || ''} alt={user.displayName || 'Usuario'} />
-                    <AvatarFallback>{user.displayName?.charAt(0) || user.email?.charAt(0) || 'U'}</AvatarFallback>
+                    <AvatarImage src={(user.user_metadata?.avatar_url as string | undefined) || ''} alt={(user.user_metadata?.full_name as string | undefined) || 'Usuario'} />
+                    <AvatarFallback>{(user.user_metadata?.full_name as string | undefined)?.charAt(0) || user.email?.charAt(0) || 'U'}</AvatarFallback>
                   </Avatar>
                 </button>
               </DropdownMenuTrigger>

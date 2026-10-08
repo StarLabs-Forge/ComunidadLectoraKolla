@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/lib/supabase';
 
 type Profile = {
   id: string;
@@ -20,7 +20,6 @@ const ROLE_OPTIONS = ['reader', 'editor', 'admin'] as const;
 type Role = typeof ROLE_OPTIONS[number];
 
 export default function AdminPanelPage() {
-  const supabase = createClientComponentClient();
   const [users, setUsers] = useState<Profile[]>([]);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');

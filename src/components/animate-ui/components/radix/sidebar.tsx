@@ -273,7 +273,6 @@ function Sidebar({
           hover
           controlledItems
           mode="parent"
-          forceUpdateBounds
           transition={transition}
         >
           <div
@@ -614,9 +613,9 @@ function SidebarMenuButton({
   }
 
   return (
-    <Tooltip side="right" align="center">
+    <Tooltip>
       <TooltipTrigger asChild>{button}</TooltipTrigger>
-      <TooltipContent hidden={state !== 'collapsed' || isMobile} {...tooltip} />
+      <TooltipContent side="right" align="center" hidden={state !== 'collapsed' || isMobile} {...tooltip} />
     </Tooltip>
   );
 }

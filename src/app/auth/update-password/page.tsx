@@ -7,7 +7,7 @@ import styles from "@/modules/reset/styles/reset.module.css"; // ajusta ruta si 
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export default function UpdatePasswordPage(): JSX.Element {
+export default function UpdatePasswordPage(): React.JSX.Element {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -60,7 +60,7 @@ export default function UpdatePasswordPage(): JSX.Element {
       try {
         // verifyOtp valida el token y crea sesión si es correcto
         const { data, error: vErr } = await supabase.auth.verifyOtp({
-          token: tok,
+          token_hash: tok,
           type: "recovery",
         });
 
