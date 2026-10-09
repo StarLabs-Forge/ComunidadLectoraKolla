@@ -1,6 +1,6 @@
 .ayudaContainer {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--kolla-surface) 0%, var(--kolla-primary) 100%);
   padding: 2rem 1rem;
 }
 
@@ -12,7 +12,7 @@
 
 .mainTitle {
   font-size: 3rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #C98A7D;
+  color: var(--kolla-primary-soft);
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -35,9 +35,9 @@
 .tabButton {
   padding: 0.75rem 2rem;
   background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #A85F55;
+  border: 2px solid var(--kolla-primary);
   border-radius: 25px;
-  color: #A85F55;
+  color: var(--kolla-primary);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -45,13 +45,13 @@
 }
 
 .tabButton:hover {
-  background: #A85F55;
+  background: var(--kolla-primary);
   color: white;
   transform: translateY(-2px);
 }
 
 .activeTab {
-  background: #A85F55;
+  background: var(--kolla-primary);
   color: white;
   box-shadow: 0 4px 15px rgba(168, 95, 85, 0.3);
 }
@@ -94,7 +94,7 @@
 
 .faqQuestion {
   font-size: 1.25rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -125,7 +125,7 @@
 
 .contactCard h2 {
   font-size: 2rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -147,7 +147,7 @@
 .formGroup label {
   display: block;
   font-weight: 600;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -155,7 +155,7 @@
 .formTextarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--kolla-border);
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -165,7 +165,7 @@
 .formInput:focus,
 .formTextarea:focus {
   outline: none;
-  border-color: #C98A7D;
+  border-color: var(--kolla-primary-soft);
   box-shadow: 0 0 0 3px rgba(168, 95, 85, 0.1);
 }
 
@@ -177,7 +177,7 @@
 .submitButton {
   width: 100%;
   padding: 1rem;
-  background: #A85F55;
+  background: var(--kolla-primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -188,7 +188,7 @@
 }
 
 .submitButton:hover {
-  background: #C98A7D;
+  background: var(--kolla-primary-soft);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(168, 95, 85, 0.3);
 }

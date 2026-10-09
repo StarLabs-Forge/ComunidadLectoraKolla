@@ -1,9 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
-import logoCompleto from '../../../public/logoCompleto.png';
-import minilogo from '../../../public/minilogo.png';
+import KollaLogo from '@/components/brand/KollaLogo';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -97,22 +95,8 @@ const Header: React.FC = () => {
         {/* Logo - Left */}
         <div className={styles.logoContainer}>
           <Link href="/">
-            <Image
-              src={logoCompleto}
-              alt="Comunidad Lectora Bolivia"
-              width={120}
-              height={15}
-              className={styles.logoCompleto}
-              priority
-            />
-            <Image
-              src={minilogo}
-              alt="Comunidad Lectora Bolivia"
-              width={120}
-              height={15}
-              className={styles.minilogo}
-              priority
-            />
+            <span className={styles.logoCompleto}><KollaLogo variant="horizontal" height={32} /></span>
+            <span className={styles.minilogo}><KollaLogo variant="isotipo" height={32} /></span>
           </Link>
         </div>
 

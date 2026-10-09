@@ -10,12 +10,12 @@
   .login-card {
     position: relative;
     width: min(440px, 92vw);
-    background: var(--surface);
+    background: var(--kolla-surface);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--kolla-shadow-raised);
     overflow: hidden;
     padding: 28px;
-    border: 1px solid #E8DED8;
+    border: 1px solid var(--kolla-border);
     transform: translateZ(0);
   }
 
@@ -68,7 +68,7 @@
   }
   .login-subtitle {
     margin: 0;
-    color: var(--muted);
+    color: var(--kolla-text-secondary);
     font-size: 14px;
   }
   
@@ -86,22 +86,22 @@
   }
   .label {
     font-size: 13px;
-    color: var(--muted);
+    color: var(--kolla-text-secondary);
   }
   
   .input {
     width: 100%;
     padding: 12px 13px;
     border-radius: 10px;
-    border: 1px solid #E8DED8;
-    background: var(--surface);
-    color: var(--text);
+    border: 1px solid var(--kolla-border);
+    background: var(--kolla-surface);
+    color: var(--kolla-text);
     outline: none;
-    box-shadow: var(--shadow-sm);
-    transition: border var(--transition), box-shadow var(--transition), transform var(--transition);
+    box-shadow: var(--kolla-shadow);
+    transition: border 180ms ease, box-shadow 180ms ease, transform 180ms ease;
   }
   .input:focus {
-    border-color: #A85F55;
+    border-color: var(--kolla-primary);
     box-shadow: 0 0 0 4px rgba(168, 95, 85, 0.1);
     transform: translateY(-1px);
   }
@@ -113,7 +113,7 @@
     position: absolute;
     right: 10px; top: 50%;
     transform: translateY(-50%);
-    border: none; background: transparent; color: var(--muted);
+    border: none; background: transparent; color: var(--kolla-text-secondary);
     cursor: pointer; font-size: 12px;
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@
   
   .checkbox {
     display: inline-flex; gap: 8px; align-items: center;
-    font-size: 13px; color: var(--muted);
+    font-size: 13px; color: var(--kolla-text-secondary);
     cursor: pointer;
   }
   
@@ -136,12 +136,12 @@
     padding: 12px 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
   }
   .btn:disabled { opacity: 0.6; cursor: not-allowed; }
   
   .btn-primary {
-    background: linear-gradient(135deg, #A85F55, #934F47);
+    background: linear-gradient(135deg, var(--kolla-primary), var(--kolla-primary-hover));
     color: #fff;
     box-shadow: 0 8px 24px rgba(168, 95, 85, 0.2);
   }
@@ -149,31 +149,31 @@
 
   .btn-ghost {
     background: transparent;
-    color: var(--text);
-    border: 1px solid #E8DED8;
+    color: var(--kolla-text);
+    border: 1px solid var(--kolla-border);
   }
-  .btn-ghost:hover { background: #F4E8E4; }
+  .btn-ghost:hover { background: var(--kolla-surface-soft); }
 
   .btn-outline {
     background: transparent;
-    color: var(--text);
-    border: 1px solid #E8DED8;
+    color: var(--kolla-text);
+    border: 1px solid var(--kolla-border);
   }
-  .btn-outline:hover { background: #F4E8E4; }
+  .btn-outline:hover { background: var(--kolla-surface-soft); }
 
   .divider {
     display: grid; grid-auto-flow: column; align-items: center; gap: 10px;
-    color: var(--muted); font-size: 12px; margin: 8px 0;
+    color: var(--kolla-text-secondary); font-size: 12px; margin: 8px 0;
   }
   .divider::before, .divider::after {
     content: "";
-    height: 1px; background: #E8DED8;
+    height: 1px; background: var(--kolla-border);
   }
 
   .error {
     background: rgba(184, 92, 92, 0.08);
     border: 1px solid rgba(184, 92, 92, 0.35);
-    color: #B85C5C;
+    color: var(--kolla-error);
     padding: 10px 12px; border-radius: 10px; font-size: 13px;
   }
 
@@ -181,8 +181,8 @@
     position: absolute; right: 14px; top: 14px; z-index: 2;
   }
   .theme-switch button {
-    border: 1px solid #E8DED8;
-    background: var(--surface); color: var(--text);
+    border: 1px solid var(--kolla-border);
+    background: var(--kolla-surface); color: var(--kolla-text);
     padding: 8px 10px; border-radius: 10px; cursor: pointer;
   }
   

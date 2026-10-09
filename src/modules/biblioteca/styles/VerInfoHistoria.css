@@ -1,74 +1,34 @@
+:root {
+  --vh-tag-secondary-start: var(--kolla-accent);
+  --vh-kolla-primary-soft: var(--kolla-primary-soft);
+  --vh-kolla-primary-dark: var(--kolla-primary-hover);
+  --vh-tag-secondary-end: var(--kolla-primary-soft);
+  --vh-btn-gradient-1: var(--kolla-primary);
+  --vh-btn-gradient-3: var(--kolla-accent);
+  --vh-btn-gradient-2: var(--kolla-primary-soft);
+  --vh-kolla-primary: var(--kolla-primary);
+  --vh-kolla-success: var(--kolla-success);
+  --vh-kolla-accent: var(--kolla-accent);
+  --vh-tag-bg-start: var(--kolla-primary);
+  --vh-accent-text: var(--kolla-text);
+  --vh-kolla-deep: var(--kolla-deep);
+  --vh-tag-bg-end: var(--kolla-primary-soft);
+  --vh-border: var(--kolla-border);
+  --vh-tag-fg: #FFFFFF;
+  --vh-muted: var(--kolla-text-secondary);
+  --vh-card: var(--kolla-surface);
+  --vh-bg: var(--kolla-background);
+}
+
 /* =========================
    VerInfoHistoria.css — versión final
    ========================= */
 
 /* ---------- Variables (modo claro) - Kolla Terracota Editorial ---------- */
-:root {
-    --kolla-primary: #A85F55;
-    --kolla-primary-dark: #934F47;
-    --kolla-primary-soft: #C98A7D;
-    --kolla-accent: #D9A441;
-    --kolla-deep: #264653;
-    --kolla-success: #4F8068;
-
-    --bg: #F8F3EE;
-    --card: #FFFFFF;
-    --muted: #A69B96;
-    --border: #E8DED8;
-    --accent-text: #29282A;
-
-    --tag-fg: #FFFFFF;
-    --tag-bg-start: #A85F55;
-    --tag-bg-end: #C98A7D;
-    --tag-secondary-start: #D9A441;
-    --tag-secondary-end: #C98A7D;
-
-    --btn-gradient-1: #A85F55;
-    --btn-gradient-2: #C98A7D;
-    --btn-gradient-3: #D9A441;
-  }
 
   /* Dark mode overrides - Kolla Terracota Editorial */
-  html.dark,
-  html[data-theme="dark"],
-  :root[data-theme="dark"] {
-    --bg: #1E2021;
-    --card: #29282A;
-    --muted: #A69B96;
-    --border: #3A3935;
-    --accent-text: #F8F3EE;
-
-    --tag-fg: #FFFFFF;
-    --tag-bg-start: #C97869;
-    --tag-bg-end: #D9896E;
-    --tag-secondary-start: #D9A441;
-    --tag-secondary-end: #D9896E;
-
-    --btn-gradient-1: #C97869;
-    --btn-gradient-2: #D9896E;
-    --btn-gradient-3: #D9A441;
-  }
 
   /* Fallback a preferencia del sistema */
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-      --bg: #1E2021;
-      --card: #29282A;
-      --muted: #A69B96;
-      --border: #3A3935;
-      --accent-text: #F8F3EE;
-
-      --tag-fg: #FFFFFF;
-      --tag-bg-start: #C97869;
-      --tag-bg-end: #D9896E;
-      --tag-secondary-start: #D9A441;
-      --tag-secondary-end: #D9896E;
-
-      --btn-gradient-1: #C97869;
-      --btn-gradient-2: #D9896E;
-      --btn-gradient-3: #D9A441;
-    }
-  }
   
   /* =========================
      Layout principal
@@ -80,8 +40,8 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background: var(--bg);
-    color: var(--accent-text);
+    background: var(--vh-bg);
+    color: var(--vh-accent-text);
     -webkit-font-smoothing: antialiased;
   }
   
@@ -97,7 +57,7 @@
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--green-5), var(--green-2));
+    background: linear-gradient(180deg, var(--kolla-primary), var(--kolla-primary-soft));
     box-shadow: 0 6px 18px rgba(41, 40, 42,0.10);
     flex: 0 0 auto;
   }
@@ -126,7 +86,7 @@
   
   .vih-author {
     margin: 0;
-    color: var(--muted);
+    color: var(--vh-muted);
     font-size: 0.95rem;
   }
   
@@ -152,7 +112,7 @@
     font-size: 0.84rem;
     font-weight: 600;
     border-radius: 8px;
-    background-image: linear-gradient(180deg, var(--green-3), var(--green-2));
+    background-image: linear-gradient(180deg, var(--kolla-primary), var(--kolla-primary-soft));
     color: #ffffff;
     border: 1px solid rgba(0,0,0,0.08);
     box-shadow: 0 6px 18px rgba(41, 40, 42,0.12);
@@ -176,9 +136,9 @@
     font-size: 0.78rem;
     border-radius: 999px;
     font-weight: 500;
-    color: var(--tag-fg);
+    color: var(--vh-tag-fg);
     border: 1px solid rgba(255,255,255,0.06);
-    background-image: linear-gradient(135deg, var(--tag-bg-start), var(--tag-bg-end));
+    background-image: linear-gradient(135deg, var(--vh-tag-bg-start), var(--vh-tag-bg-end));
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,0.03),
       0 6px 16px rgba(30,40,80,0.10);
@@ -199,7 +159,7 @@
   .vih-tags > .vih-tag.secondary,
   .vih-tags > *:not(.vih-genre).secondary,
   .vih-tags > *[data-tag].secondary {
-    background-image: linear-gradient(135deg, var(--tag-secondary-start), var(--tag-secondary-end));
+    background-image: linear-gradient(135deg, var(--vh-tag-secondary-start), var(--vh-tag-secondary-end));
     color: #fff;
     border-color: rgba(255,255,255,0.06);
     box-shadow: 0 10px 28px rgba(120,60,200,0.12);
@@ -220,12 +180,12 @@
      ========================= */
   
   .vih-section {
-    background: var(--card);
-    border: 1px solid var(--border);
+    background: var(--vh-card);
+    border: 1px solid var(--vh-border);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 6px 20px rgba(11,40,12,0.04);
-    color: var(--accent-text);
+    color: var(--vh-accent-text);
   }
   
   .vih-section h2 {
@@ -245,10 +205,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--card);
+    background: var(--vh-card);
     border-radius: 0.5rem;
     padding: 0.8rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--vh-border);
     transition: transform .12s ease, box-shadow .12s ease;
   }
   
@@ -272,7 +232,7 @@
   .vih-btn.read,
   .vih-chapter-item a.vih-btn.read,
   .vih-chapter-item button.vih-btn.read {
-    background-image: linear-gradient(90deg, var(--btn-gradient-1), var(--btn-gradient-2) 40%, var(--btn-gradient-3));
+    background-image: linear-gradient(90deg, var(--vh-btn-gradient-1), var(--vh-btn-gradient-2) 40%, var(--vh-btn-gradient-3));
     color: white;
     font-weight: 700;
     box-shadow: 0 8px 28px rgba(80,60,160,0.12);
@@ -284,7 +244,7 @@
   .vih-chapter-item button.vih-btn.disabled {
     opacity: 0.6;
     background: rgba(0,0,0,0.12);
-    color: var(--muted);
+    color: var(--vh-muted);
     cursor: not-allowed;
     box-shadow: none;
   }
@@ -313,7 +273,7 @@
     position: relative;
     border-radius: 0.45rem;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--green-5), var(--green-2));
+    background: linear-gradient(180deg, var(--kolla-primary), var(--kolla-primary-soft));
     box-shadow: 0 8px 22px rgba(8,40,16,0.06);
   }
   
@@ -327,7 +287,7 @@
   
   .vih-rec-title {
     font-size: 0.9rem;
-    color: var(--accent-text);
+    color: var(--vh-accent-text);
   }
   
   /* =========================
@@ -385,9 +345,8 @@
   .vih-genres a,
   .vih-genres span,
   .vih-genres button {
-    background-image: linear-gradient(180deg, var(--green-3), var(--green-4)) !important;
+    background-image: linear-gradient(180deg, var(--kolla-primary), var(--kolla-primary-hover)) !important;
     color: #ffffff !important;
     border: 1px solid rgba(0,0,0,0.08) !important;
     box-shadow: 0 6px 18px rgba(41, 40, 42,0.12) !important;
   }
-  

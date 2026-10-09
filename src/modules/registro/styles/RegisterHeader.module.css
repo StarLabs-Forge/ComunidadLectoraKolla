@@ -1,3 +1,6 @@
+:root {
+}
+
 .header {
   display: grid;
   gap: 6px;
@@ -7,13 +10,13 @@
 .title {
   margin: 0;
   font-size: 28px;
-  color: var(--text-1);
+  color: var(--kolla-text);
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .subtitle {
   margin: 0;
-  color: var(--text-2);
+  color: var(--kolla-text-secondary);
   font-size: 14px;
 }

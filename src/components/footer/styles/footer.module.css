@@ -1,6 +1,6 @@
 .footer {
-  background: #934F47;
-  border-top: 1px solid #A85F55;
+  background: var(--kolla-primary-hover);
+  border-top: 1px solid var(--kolla-primary);
   padding: 2rem 0;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .footerLink {
-  color: #A85F55;
+  color: var(--kolla-primary);
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -28,17 +28,17 @@
 }
 
 .footerLink:hover {
-  color: #C98A7D;
+  color: var(--kolla-primary-soft);
 }
 
 .footerDivider {
-  border-top: 1px solid #A85F55;
+  border-top: 1px solid var(--kolla-primary);
   margin: 1.5rem 0;
 }
 
 .footerCopyright {
   text-align: center;
-  color: #A85F55;
+  color: var(--kolla-primary);
   font-size: 0.875rem;
 }
 

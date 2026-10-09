@@ -1,16 +1,23 @@
 :root {
-  --bg: #0b1220; --surface:#111a2b; --surface-2:#0e1726; --text:#edf2ff; --muted:#a5b3d6;
-  --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#4F8068; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
+  --es-surface-2: var(--kolla-surface-soft);
+  --es-surface: var(--kolla-surface);
+  --es-brand-2: var(--kolla-primary-soft);
+  --es-stroke: var(--kolla-border);
+  --es-brand: var(--kolla-primary);
+  --es-muted: var(--kolla-text-secondary);
+  --es-text: var(--kolla-text);
+  --es-warn: var(--kolla-warning);
+  --es-ok: var(--kolla-success);
+  --es-bg: var(--kolla-background);
 }
-@media (prefers-color-scheme: light){
-  :root{ --bg:#f6f8ff; --surface:#ffffff; --surface-2:#f1f5ff; --text:#0e1726; --muted:#4b5563; --stroke:rgba(0,0,0,0.08); }
-}
+
+
 
 .container {
     padding: 8rem 2rem 3rem;
-    background: var(--bg);
+    background: var(--es-bg);
     min-height: 100vh;
-    color: var(--text);
+    color: var(--es-text);
     overflow-x: hidden;
     animation: fadeIn 0.8s ease-in;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
@@ -22,7 +29,7 @@
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: 1px;
-    background: linear-gradient(90deg, #4cc9f0, #f72585);
+    background: linear-gradient(90deg, var(--kolla-primary), var(--kolla-error));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: titleSlide 1.5s ease-in-out;
@@ -35,8 +42,8 @@
   }
   
   .card {
-    background: linear-gradient(180deg, var(--surface), var(--surface-2));
-    border: 1px solid var(--stroke);
+    background: linear-gradient(180deg, var(--es-surface), var(--es-surface-2));
+    border: 1px solid var(--es-stroke);
     border-radius: 1.5rem;
     padding: 1.5rem;
     box-shadow: 0 0 15px rgba(247, 37, 133, 0.4);
@@ -57,7 +64,7 @@
   }
   
   .badge {
-    background: linear-gradient(90deg, #4cc9f0, #7209b7);
+    background: linear-gradient(90deg, var(--kolla-primary), var(--kolla-primary));
     border-radius: 12px;
     padding: 0.3rem 0.8rem;
     font-size: 0.8rem;
@@ -83,37 +90,37 @@
   }
   
   .view {
-    background: #4cc9f0;
+    background: var(--kolla-primary);
     color: #fff;
   }
   .view:hover {
-    background: #3a0ca3;
+    background: var(--kolla-primary);
   }
   
   .edit {
-    background: #7209b7;
+    background: var(--kolla-primary);
     color: #fff;
   }
   .edit:hover {
-    background: #560bad;
+    background: var(--kolla-primary);
   }
   
   .delete {
-    background: #f72585;
+    background: var(--kolla-error);
     color: #fff;
   }
   .delete:hover {
-    background: #b5179e;
+    background: var(--kolla-primary);
   }
 
   .create {
-    background: linear-gradient(90deg, #4cc9f0, #7209b7);
+    background: linear-gradient(90deg, var(--kolla-primary), var(--kolla-primary));
     color: #fff;
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
   }
   .create:hover {
-    background: linear-gradient(90deg, #3a0ca3, #560bad);
+    background: linear-gradient(90deg, var(--kolla-primary), var(--kolla-primary));
   }
 
   .createSection {
@@ -123,8 +130,8 @@
   }
 
   .formContainer {
-    background: linear-gradient(180deg, var(--surface), var(--surface-2));
-    border: 1px solid var(--stroke);
+    background: linear-gradient(180deg, var(--es-surface), var(--es-surface-2));
+    border: 1px solid var(--es-stroke);
     border-radius: 1.5rem;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -138,7 +145,7 @@
   .formContainer h3 {
     margin-bottom: 1.5rem;
     text-align: center;
-    color: var(--brand);
+    color: var(--es-brand);
   }
 
   .formGroup {
@@ -149,24 +156,24 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--es-text);
   }
 
   .formGroup input,
   .formGroup textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid var(--stroke);
+    border: 1px solid var(--es-stroke);
     border-radius: 0.5rem;
-    background: var(--surface-2);
-    color: var(--text);
+    background: var(--es-surface-2);
+    color: var(--es-text);
     font-size: 1rem;
   }
 
   .formGroup input:focus,
   .formGroup textarea:focus {
     outline: none;
-    border-color: var(--brand);
+    border-color: var(--es-brand);
     box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
   }
 
@@ -178,16 +185,16 @@
   }
 
   .save {
-    background: var(--ok);
+    background: var(--es-ok);
     color: #fff;
   }
   .save:hover {
-    background: #4F8068;
+    background: var(--kolla-success);
   }
 
   .cancel {
-    background: var(--muted);
-    color: var(--text);
+    background: var(--es-muted);
+    color: var(--es-text);
   }
   .cancel:hover {
     background: #6b7280;
@@ -202,4 +209,3 @@
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  

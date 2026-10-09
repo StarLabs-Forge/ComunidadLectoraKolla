@@ -12,9 +12,9 @@
 /* Tarjeta principal */
 .cardWide {
   width: 100%;
-  background: var(--surface);
+  background: var(--kolla-surface);
   border-radius: 14px;
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--kolla-border);
   padding: 24px 28px;
   box-sizing: border-box;
 }
@@ -92,10 +92,10 @@
   min-height: 200px;
   padding: 14px;
   border-radius: 10px;
-  border: 1px solid var(--stroke);
-  background: var(--surface-2);
+  border: 1px solid var(--kolla-border);
+  background: var(--kolla-surface-soft);
   resize: vertical;
-  color: var(--text);
+  color: var(--kolla-text);
   box-sizing: border-box;
   line-height: 1.55;
 }
@@ -111,11 +111,11 @@
 .kollaIAButton {
   padding: 12px 22px;
   border-radius: 12px;
-  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  background: linear-gradient(90deg, var(--kolla-primary), var(--kolla-primary-soft));
   border: none;
   cursor: pointer;
   font-weight: 700;
-  color: var(--bg);
+  color: var(--kolla-background);
   box-shadow: 0 4px 18px rgba(0,0,0,0.25);
   transition: 0.25s ease;
   display: flex;
@@ -129,7 +129,7 @@
 }
 
 .kollaIAButton.active {
-  background: linear-gradient(90deg, var(--warn), var(--brand));
+  background: linear-gradient(90deg, var(--kolla-warning), var(--kolla-primary));
   box-shadow: 0 0 20px rgba(255,170,60,0.35);
 }
 
@@ -138,9 +138,9 @@
 ========================================= */
 
 .aiColumn {
-  background: var(--surface-2);
+  background: var(--kolla-surface-soft);
   border-radius: 12px;
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--kolla-border);
   padding: 18px;
   box-sizing: border-box;
   display: flex;
@@ -167,9 +167,9 @@
 .aiBtn {
   padding: 10px 20px;
   border-radius: 10px;
-  background: #0b1220;
+  background: var(--kolla-primary);
   border: 2px solid #6ee7ff55;
-  color: #6ee7ff;
+  color: var(--kolla-primary);
   text-shadow: 0 0 8px #6ee7ff;
   box-shadow: 0 0 10px #6ee7ff40;
   cursor: pointer;
@@ -177,14 +177,14 @@
 }
 
 .aiBtn:hover {
-  border-color: #6ee7ff;
+  border-color: var(--kolla-primary);
   box-shadow: 0 0 20px #6ee7ff80;
   transform: translateY(-2px);
 }
 
 .aiBtn.active {
-  border-color: #7c4dff;
-  color: #7c4dff;
+  border-color: var(--kolla-primary);
+  color: var(--kolla-primary);
   text-shadow: 0 0 6px #7c4dff;
   box-shadow: 0 0 20px #7c4dff80;
 }

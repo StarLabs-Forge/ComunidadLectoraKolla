@@ -1,11 +1,11 @@
 /* Embajadores Page Styles */
 .embajadores-main {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #fef3c7, #fde68a);
+  background: linear-gradient(to bottom right, var(--kolla-surface-soft), var(--kolla-accent));
 }
 
 .dark .embajadores-main {
-  background: linear-gradient(to bottom right, #451a03, #78350f);
+  background: linear-gradient(to bottom right, var(--kolla-surface), var(--kolla-surface-raised));
 }
 
 .embajadores-container {
@@ -25,18 +25,18 @@
 .embajadores-users-icon {
   width: 4rem;
   height: 4rem;
-  color: #f59e0b;
+  color: var(--kolla-accent);
   margin: 0 auto 1.5rem;
 }
 
 .dark .embajadores-users-icon {
-  color: #fbbf24;
+  color: var(--kolla-accent);
 }
 
 .embajadores-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--kolla-text);
   margin-bottom: 1rem;
 }
 
@@ -52,13 +52,13 @@
 
 .embajadores-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   max-width: 42rem;
   margin: 0 auto;
 }
 
 .dark .embajadores-subtitle {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 /* Embajadores Grid */
@@ -82,7 +82,7 @@
 
 /* Embajador Card */
 .embajador-card {
-  background-color: #ffffff;
+  background-color: var(--kolla-surface);
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
@@ -96,9 +96,9 @@
 }
 
 .dark .embajador-card {
-  background-color: #1f2937;
+  background-color: var(--kolla-surface);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  border-color: #374151;
+  border-color: var(--kolla-border);
 }
 
 .dark .embajador-card:hover {
@@ -109,7 +109,7 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, var(--kolla-accent), var(--kolla-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,13 +120,13 @@
 }
 
 .dark .embajador-avatar {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, var(--kolla-accent), var(--kolla-accent));
 }
 
 .embajador-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--kolla-text);
   margin-bottom: 0.5rem;
 }
 
@@ -135,29 +135,29 @@
 }
 
 .embajador-role {
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   margin-bottom: 1rem;
   font-style: italic;
 }
 
 .dark .embajador-role {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 .embajador-description {
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .dark .embajador-description {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 /* Call to Action */
 .embajadores-cta {
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--kolla-surface);
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 2rem;
@@ -165,15 +165,15 @@
 }
 
 .dark .embajadores-cta {
-  background-color: #1f2937;
+  background-color: var(--kolla-surface);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  border-color: #374151;
+  border-color: var(--kolla-border);
 }
 
 .embajadores-cta-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--kolla-text);
   margin-bottom: 1rem;
 }
 
@@ -182,16 +182,16 @@
 }
 
 .embajadores-cta-description {
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .dark .embajadores-cta-description {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 .embajadores-cta-button {
-  background-color: #f59e0b;
+  background-color: var(--kolla-accent);
   color: #ffffff;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -202,13 +202,13 @@
 }
 
 .embajadores-cta-button:hover {
-  background-color: #d97706;
+  background-color: var(--kolla-accent);
 }
 
 .dark .embajadores-cta-button {
-  background-color: #fbbf24;
+  background-color: var(--kolla-accent);
 }
 
 .dark .embajadores-cta-button:hover {
-  background-color: #f59e0b;
+  background-color: var(--kolla-accent);
 }

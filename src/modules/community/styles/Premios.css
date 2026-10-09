@@ -1,11 +1,11 @@
 /* Premios Page Styles */
 .premios-main {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+  background: linear-gradient(to bottom right, var(--kolla-surface), var(--kolla-surface-soft));
 }
 
 .dark .premios-main {
-  background: linear-gradient(to bottom right, #111827, #1f2937);
+  background: linear-gradient(to bottom right, var(--kolla-surface), var(--kolla-surface));
 }
 
 .premios-container {
@@ -25,18 +25,18 @@
 .premios-trophy-icon {
   width: 4rem;
   height: 4rem;
-  color: #eab308;
+  color: var(--kolla-accent);
   margin: 0 auto 1.5rem;
 }
 
 .dark .premios-trophy-icon {
-  color: #fbbf24;
+  color: var(--kolla-accent);
 }
 
 .premios-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--kolla-text);
   margin-bottom: 1rem;
 }
 
@@ -52,13 +52,13 @@
 
 .premios-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   max-width: 42rem;
   margin: 0 auto;
 }
 
 .dark .premios-subtitle {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 /* Premios Grid */
@@ -82,7 +82,7 @@
 
 /* Premio Card */
 .premio-card {
-  background-color: #ffffff;
+  background-color: var(--kolla-surface);
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
@@ -95,9 +95,9 @@
 }
 
 .dark .premio-card {
-  background-color: #1f2937;
+  background-color: var(--kolla-surface);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  border-color: #374151;
+  border-color: var(--kolla-border);
 }
 
 .dark .premio-card:hover {
@@ -117,15 +117,15 @@
 }
 
 .premio-icon-blue {
-  color: #3b82f6;
+  color: var(--kolla-primary);
 }
 
 .dark .premio-icon-blue {
-  color: #60a5fa;
+  color: var(--kolla-info);
 }
 
 .premio-icon-green {
-  color: #4F8068;
+  color: var(--kolla-success);
 }
 
 .dark .premio-icon-green {
@@ -133,17 +133,17 @@
 }
 
 .premio-icon-purple {
-  color: #8b5cf6;
+  color: var(--kolla-primary);
 }
 
 .dark .premio-icon-purple {
-  color: #a78bfa;
+  color: var(--kolla-info);
 }
 
 .premio-card-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--kolla-text);
 }
 
 .dark .premio-card-title {
@@ -151,22 +151,22 @@
 }
 
 .premio-description {
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   margin-bottom: 1rem;
 }
 
 .dark .premio-description {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 .premio-stars {
   display: flex;
   align-items: center;
-  color: #eab308;
+  color: var(--kolla-accent);
 }
 
 .dark .premio-stars {
-  color: #fbbf24;
+  color: var(--kolla-accent);
 }
 
 .star-filled {
@@ -176,7 +176,7 @@
 /* Call to Action */
 .cta-section {
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--kolla-surface);
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 2rem;
@@ -184,15 +184,15 @@
 }
 
 .dark .cta-section {
-  background-color: #1f2937;
+  background-color: var(--kolla-surface);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  border-color: #374151;
+  border-color: var(--kolla-border);
 }
 
 .cta-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+  color: var(--kolla-text);
   margin-bottom: 1rem;
 }
 
@@ -201,16 +201,16 @@
 }
 
 .cta-description {
-  color: #6b7280;
+  color: var(--kolla-text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .dark .cta-description {
-  color: #d1d5db;
+  color: var(--kolla-text);
 }
 
 .cta-button {
-  background-color: #2563eb;
+  background-color: var(--kolla-primary);
   color: #ffffff;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -221,13 +221,13 @@
 }
 
 .cta-button:hover {
-  background-color: #1d4ed8;
+  background-color: var(--kolla-primary);
 }
 
 .dark .cta-button {
-  background-color: #3b82f6;
+  background-color: var(--kolla-primary);
 }
 
 .dark .cta-button:hover {
-  background-color: #2563eb;
+  background-color: var(--kolla-primary);
 }

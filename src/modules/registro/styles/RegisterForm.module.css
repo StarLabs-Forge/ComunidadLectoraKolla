@@ -1,3 +1,6 @@
+:root {
+}
+
 .oauthBtn {
   width: 100%;
   display: inline-flex;
@@ -6,9 +9,9 @@
   gap: 10px;
   padding: 11px 14px;
   border-radius: 12px;
-  border: 1px solid #2a3a55;
-  background: #101a2a;
-  color: var(--text-1);
+  border: 1px solid var(--kolla-primary);
+  background: var(--kolla-primary);
+  color: var(--kolla-text);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.08s, box-shadow 0.2s, border-color 0.2s;
@@ -16,7 +19,7 @@
 
 .oauthBtn:hover {
   box-shadow: 0 6px 22px rgba(79, 125, 255, 0.18);
-  border-color: #3759a1;
+  border-color: var(--kolla-primary);
 }
 
 .oauthBtn:active {
@@ -42,7 +45,7 @@
 }
 
 .divider em {
-  color: var(--text-2);
+  color: var(--kolla-text-secondary);
   font-style: normal;
   font-size: 12px;
 }
@@ -59,7 +62,7 @@
 }
 
 .group label {
-  color: #cdd6e6;
+  color: var(--kolla-primary);
   font-size: 13px;
   display: inline-flex;
   align-items: center;
@@ -67,16 +70,16 @@
 }
 
 .required {
-  color: var(--danger);
+  color: var(--kolla-error);
   font-weight: 800;
   transform: translateY(-1px);
 }
 
 .group input,
 .role select {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  color: var(--text-1);
+  background: var(--kolla-surface);
+  border: 1px solid var(--kolla-border);
+  color: var(--kolla-text);
   border-radius: 12px;
   padding: 12px 14px;
   outline: none;
@@ -86,19 +89,19 @@
 /* “glow” al enfocar */
 .group input:focus,
 .role select:focus {
-  border-color: var(--primary);
+  border-color: var(--kolla-primary);
   box-shadow: 0 0 0 3px rgba(79, 125, 255, 0.22);
 }
 
 /* invalid shake */
 .group input[data-invalid],
 .group select[data-invalid] {
-  border-color: var(--danger);
+  border-color: var(--kolla-error);
   animation: shake 0.28s ease-in-out;
 }
 
 .errMsg {
-  color: #ffb7be;
+  color: var(--kolla-error);
   font-size: 12px;
   line-height: 1.2;
   padding-left: 2px;
@@ -128,7 +131,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-2);
+  color: var(--kolla-text-secondary);
   font-size: 13px;
 }
 
@@ -136,13 +139,13 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #cdd6e6;
+  color: var(--kolla-primary);
   font-size: 13px;
 }
 
 /* ===== Botón submit ===== */
 .submit {
-  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  background: linear-gradient(180deg, var(--kolla-primary), var(--kolla-primary-hover));
   border: none;
   border-radius: 14px;
   color: #fff;
@@ -174,15 +177,15 @@
 
 /* Nota + error global */
 .note {
-  color: var(--text-2);
+  color: var(--kolla-text-secondary);
   font-size: 12px;
   margin-top: 6px;
 }
 
 .error {
-  background: #2a0f11;
-  border: 1px solid #6b1e24;
-  color: #ffb7be;
+  background: var(--kolla-error);
+  border: 1px solid var(--kolla-error);
+  color: var(--kolla-error);
   padding: 10px 12px;
   border-radius: 12px;
   font-size: 13px;
@@ -195,7 +198,7 @@
 }
 
 .footerLinks a {
-  color: #9fb4ff;
+  color: var(--kolla-primary);
   text-decoration: none;
   font-size: 14px;
 }

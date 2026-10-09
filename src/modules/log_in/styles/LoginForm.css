@@ -12,7 +12,7 @@
 }
 .label {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--kolla-text-secondary);
 }
 
 .input {
@@ -20,15 +20,15 @@
   padding: 12px 13px;
   border-radius: 10px;
   border: 1px solid rgba(168, 95, 85,0.18);
-  background: color-mix(in srgb, var(--surface), black 0%);
-  color: var(--text);
+  background: color-mix(in srgb, var(--kolla-surface), black 0%);
+  color: var(--kolla-text);
   outline: none;
-  box-shadow: var(--shadow-sm);
-  transition: border var(--transition), box-shadow var(--transition), transform var(--transition);
+  box-shadow: var(--kolla-shadow);
+  transition: border 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 .input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px var(--ring);
+  border-color: var(--kolla-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--kolla-primary) 25%, transparent);
   transform: translateY(-1px);
 }
 
@@ -39,7 +39,7 @@
   position: absolute;
   right: 10px; top: 50%;
   transform: translateY(-50%);
-  border: none; background: transparent; color: var(--muted);
+  border: none; background: transparent; color: var(--kolla-text-secondary);
   cursor: pointer; font-size: 12px;
 }
 
@@ -49,7 +49,7 @@
 
 .checkbox {
   display: inline-flex; gap: 8px; align-items: center;
-  font-size: 13px; color: var(--muted);
+  font-size: 13px; color: var(--kolla-text-secondary);
   cursor: pointer;
 }
 
@@ -59,12 +59,12 @@
   padding: 12px 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
 }
 .btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary), black 12%));
+  background: linear-gradient(135deg, var(--kolla-primary), color-mix(in srgb, var(--kolla-primary), black 12%));
   color: #fff;
   box-shadow: 0 8px 24px rgba(168, 95, 85,0.3);
 }
@@ -72,14 +72,14 @@
 
 .btn-ghost {
   background: transparent;
-  color: var(--text);
+  color: var(--kolla-text);
   border: 1px solid rgba(168, 95, 85,0.20);
 }
 .btn-ghost:hover { background: rgba(168, 95, 85,0.06); }
 
 .divider {
   display: grid; grid-auto-flow: column; align-items: center; gap: 10px;
-  color: var(--muted); font-size: 12px; margin: 8px 0;
+  color: var(--kolla-text-secondary); font-size: 12px; margin: 8px 0;
 }
 .divider::before, .divider::after {
   content: "";
@@ -89,6 +89,6 @@
 .error {
   background: rgba(220, 38, 38, 0.08);
   border: 1px solid rgba(220, 38, 38, 0.35);
-  color: #c0392b;
+  color: var(--kolla-error);
   padding: 10px 12px; border-radius: 10px; font-size: 13px;
 }

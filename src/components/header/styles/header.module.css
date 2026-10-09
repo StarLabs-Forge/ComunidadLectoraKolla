@@ -1,21 +1,11 @@
 :root {
-  --header-bg: rgba(248, 243, 238, 0.95);
-  --header-text: #29282A;
-  --header-hover: #A85F55;
-  --header-border: #E8DED8;
-  --header-bg-dropdown: #FFFFFF;
-  --header-bg-dropdown-header: #F8F3EE;
-  --header-bg-hover: rgba(168, 95, 85, 0.08);
-}
-
-.dark {
-  --header-bg: rgba(30, 32, 33, 0.95);
-  --header-text: #F8F3EE;
-  --header-hover: #C97869;
-  --header-border: #3A3935;
-  --header-bg-dropdown: #29282A;
-  --header-bg-dropdown-header: #1E2021;
-  --header-bg-hover: rgba(201, 120, 105, 0.12);
+  --header-bg: color-mix(in srgb, var(--kolla-background) 95%, transparent);
+  --header-text: var(--kolla-text);
+  --header-hover: var(--kolla-primary);
+  --header-border: var(--kolla-border);
+  --header-bg-dropdown: var(--kolla-surface-raised);
+  --header-bg-dropdown-header: var(--kolla-surface-soft);
+  --header-bg-hover: color-mix(in srgb, var(--kolla-primary) 10%, transparent);
 }
 
 .header {
@@ -116,7 +106,7 @@
 
 .dropdownHeader {
   padding: 1rem;
-  border-bottom: 1px solid #E8DED8;
+  border-bottom: 1px solid var(--kolla-border);
   background: var(--header-bg-dropdown-header);
 }
 
@@ -221,15 +211,11 @@
 
 .logoCompleto {
   object-fit: contain;
-  margin-top: -8px;
-  margin-bottom: -8px;
   display: none;
 }
 
 .minilogo {
   object-fit: contain;
-  margin-top: -8px;
-  margin-bottom: -8px;
   display: block;
 }
 
@@ -288,7 +274,7 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #A85F55;
+  color: var(--kolla-primary);
   height: 1rem;
   width: 1rem;
 }
@@ -298,11 +284,11 @@
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-color: #A85F55;
+  border-color: var(--kolla-primary);
 }
 
 .searchInput:focus {
-  border-color: #C98A7D;
+  border-color: var(--kolla-primary-soft);
   ring-color: #C98A7D;
 }
 

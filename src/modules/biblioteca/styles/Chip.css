@@ -1,8 +1,8 @@
 /* Chip.css - Kolla Terracota Editorial estilo para filtros y etiquetas */
 .chip {
-  background: #F4E8E4;               /* fondo suave terracota */
-  border: 1px solid #E8DED8;         /* borde neutral */
-  color: #5E5855;                    /* texto secundario */
+  background: var(--kolla-surface-soft);               /* fondo suave terracota */
+  border: 1px solid var(--kolla-border);         /* borde neutral */
+  color: var(--kolla-text-secondary);                    /* texto secundario */
   padding: 8px 12px;
   border-radius: 999px;              /* píldora */
   display: inline-flex;
@@ -33,7 +33,7 @@
   opacity: 0.95;
   flex: 0 0 16px;
   display: block;
-  color: #A85F55;
+  color: var(--kolla-primary);
 }
 
 /* etiqueta (texto) */
@@ -48,16 +48,16 @@
 /* estado hover: levantar ligeramente y mejorar sombra */
 .chip:hover {
   box-shadow: 0 4px 12px rgba(168, 95, 85, 0.1);
-  border-color: #D9A441;
-  background: #F8F3EE;
+  border-color: var(--kolla-accent);
+  background: var(--kolla-background);
 }
 
 /* estado activo (seleccionado) */
 .chip-active {
-  border: 1.5px solid #A85F55;       /* terracota primario */
+  border: 1.5px solid var(--kolla-primary);       /* terracota primario */
   box-shadow: 0 4px 12px rgba(168, 95, 85, 0.12);
-  background: #FFFFFF;               /* blanco para destacar */
-  color: #A85F55;
+  background: var(--kolla-surface);               /* blanco para destacar */
+  color: var(--kolla-primary);
   font-weight: 600;
 }
 

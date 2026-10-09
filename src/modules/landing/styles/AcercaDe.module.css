@@ -1,6 +1,6 @@
 .acercaDeContainer {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--kolla-surface) 0%, var(--kolla-primary) 100%);
   padding: 2rem 1rem;
 }
 
@@ -31,7 +31,7 @@
 
 .mainTitle {
   font-size: 3rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 1rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #C98A7D;
+  color: var(--kolla-primary-soft);
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -83,7 +83,7 @@
 
 .card h2 {
   font-size: 1.75rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   margin-bottom: 1rem;
   font-weight: 600;
 }

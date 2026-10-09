@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../../../components/header/header';
 import Footer from '../../../components/footer/footer';
-import Image from 'next/image';
-import logoCompleto from '../../../../public/logoCompleto.png';
+import KollaLogo from '@/components/brand/KollaLogo';
 import styles from '../styles/Desarrolladores.module.css';
 
 const Desarrolladores: React.FC = () => {
@@ -110,13 +109,7 @@ const Desarrolladores: React.FC = () => {
       <Header />
       <div className={styles.desarrolladoresContainer}>
         <div className={styles.heroSection}>
-          <Image
-            src={logoCompleto}
-            alt="Comunidad Lectora Bolivia"
-            width={200}
-            height={40}
-            className={styles.logo}
-          />
+          <KollaLogo variant="horizontal" height={48} className={styles.logo} />
           <h1 className={styles.mainTitle}>Portal de Desarrolladores</h1>
           <p className={styles.heroSubtitle}>
             Integra con nuestra plataforma y construye experiencias increíbles para lectores

@@ -1,3 +1,16 @@
+:root {
+  --es-surface-2: var(--kolla-surface-soft);
+  --es-surface: var(--kolla-surface);
+  --es-brand-2: var(--kolla-primary-soft);
+  --es-stroke: var(--kolla-border);
+  --es-brand: var(--kolla-primary);
+  --es-muted: var(--kolla-text-secondary);
+  --es-text: var(--kolla-text);
+  --es-warn: var(--kolla-warning);
+  --es-ok: var(--kolla-success);
+  --es-bg: var(--kolla-background);
+}
+
 /* ai-corrector.css
    Estilos unificados y optimizados para el panel IA (comparación lado a lado)
    - Layout responsivo
@@ -6,11 +19,6 @@
    - Textareas ajustados (altura aumentada solo para panel IA)
    - Evita duplicados y reglas contradictorias
 */
-
-:root{
-    --bg: #0b1220; --surface:#111a2b; --surface-2:#0e1726; --text:#edf2ff; --muted:#a5b3d6;
-    --brand:#6ee7ff; --brand-2:#7c4dff; --ok:#4F8068; --warn:#ffb020; --stroke: rgba(255,255,255,0.08);
-  }
   
   /* -------------------------------
      Layout principal cuando el panel IA está activo
@@ -53,8 +61,8 @@
   
   /* Panel IA visual */
   .aiColumn {
-    background: linear-gradient(180deg, var(--surface), var(--surface-2));
-    border: 1px solid var(--stroke);
+    background: linear-gradient(180deg, var(--es-surface), var(--es-surface-2));
+    border: 1px solid var(--es-stroke);
     border-radius: 12px;
     padding: 14px;
     display:flex;
@@ -74,8 +82,8 @@
   
   /* Toolbar y modos */
   .aiToolbar{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:12px; }
-  .modeBtn{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px; border:1px solid var(--stroke); background:transparent; cursor:pointer; color:var(--text); }
-  .modeBtn.active{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: var(--bg); border-color: transparent; }
+  .modeBtn{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px; border:1px solid var(--es-stroke); background:transparent; cursor:pointer; color:var(--es-text); }
+  .modeBtn.active{ background: linear-gradient(90deg,var(--es-brand),var(--es-brand-2)); color: var(--es-bg); border-color: transparent; }
   
   /* Botones del corrector IA (unificados, espacio y hover) */
   .aiBtn {
@@ -84,27 +92,27 @@
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
-    background: linear-gradient(180deg, var(--surface), var(--surface-2));
-    border: 1px solid var(--stroke);
-    color: var(--text);
+    background: linear-gradient(180deg, var(--es-surface), var(--es-surface-2));
+    border: 1px solid var(--es-stroke);
+    color: var(--es-text);
     transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease;
   }
   .aiBtn:hover{ background: rgba(110,231,255,0.08); transform: translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
-  .aiBtn.active{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); border-color:transparent; color:var(--bg); box-shadow:0 6px 22px rgba(110,231,255,0.28); }
+  .aiBtn.active{ background: linear-gradient(90deg,var(--es-brand),var(--es-brand-2)); border-color:transparent; color:var(--es-bg); box-shadow:0 6px 22px rgba(110,231,255,0.28); }
   
   /* Variantes semánticas */
-  .aiApplyBtn{ background: linear-gradient(90deg, var(--ok), #4F8068); border-color: transparent; color: var(--bg); }
-  .aiGenerateBtn{ background: linear-gradient(90deg, var(--brand), var(--brand-2)); border-color: transparent; color: var(--bg); }
+  .aiApplyBtn{ background: linear-gradient(90deg, var(--es-ok), var(--kolla-success)); border-color: transparent; color: var(--es-bg); }
+  .aiGenerateBtn{ background: linear-gradient(90deg, var(--es-brand), var(--es-brand-2)); border-color: transparent; color: var(--es-bg); }
   
   /* KOLLA IA toggle (botón único abrir/cerrar) */
   .kollaIAButton{
     display:inline-flex; align-items:center; gap:10px; padding:12px 20px;
-    background: linear-gradient(90deg, var(--brand), var(--brand-2)); border:none; border-radius:12px; cursor:pointer; color:var(--bg);
+    background: linear-gradient(90deg, var(--es-brand), var(--es-brand-2)); border:none; border-radius:12px; cursor:pointer; color:var(--es-bg);
     font-size:1rem; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.25); transition: background .3s ease, transform .2s ease, box-shadow .3s ease;
   }
   .kollaIAButton:hover{ transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.35); }
   .kollaIAButton:active{ transform: scale(.97); }
-  .kollaIAButton.active{ background: linear-gradient(90deg,var(--warn),var(--brand)); box-shadow:0 0 12px rgba(255,176,32,0.45); }
+  .kollaIAButton.active{ background: linear-gradient(90deg,var(--es-warn),var(--es-brand)); box-shadow:0 0 12px rgba(255,176,32,0.45); }
  
   
   /* Textareas (solo panel IA y editor principal adaptables) */
@@ -122,21 +130,21 @@
   .comparisonWrap{ margin-top:12px; }
   .comparisonColumns{ display:grid; grid-template-columns:1fr 1fr; gap:12px; align-items:start; }
   .column{ display:flex; flex-direction:column; gap:8px; }
-  .columnTitle{ font-weight:600; font-size:0.95rem; margin-bottom:4px; color:var(--muted); }
+  .columnTitle{ font-weight:600; font-size:0.95rem; margin-bottom:4px; color:var(--es-muted); }
   
   /* Cajas de comparación (scroll) */
-  .compareBox{ white-space: pre-wrap; background: linear-gradient(180deg, var(--surface-2), rgba(0,0,0,0.02)); border:1px solid var(--stroke); border-radius:10px; padding:12px; max-height:360px; overflow-y:auto; color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-size:14px; }
+  .compareBox{ white-space: pre-wrap; background: linear-gradient(180deg, var(--es-surface-2), rgba(0,0,0,0.02)); border:1px solid var(--es-stroke); border-radius:10px; padding:12px; max-height:360px; overflow-y:auto; color:var(--es-text); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-size:14px; }
   
   /* Acciones de comparación */
   .comparisonActions{ display:flex; gap:10px; justify-content:flex-end; margin-top:8px; }
   
   /* Botones comunes (conservadores) */
-  .btn, .btnGhost{ border-radius:10px; padding:8px 12px; border:1px solid var(--stroke); background:transparent; cursor:pointer; color:var(--text); }
-  .btn.create{ background: linear-gradient(90deg,var(--brand),var(--brand-2)); color:var(--bg); border-color:transparent; }
-  .btn.cancel{ background:transparent; color:var(--muted); }
+  .btn, .btnGhost{ border-radius:10px; padding:8px 12px; border:1px solid var(--es-stroke); background:transparent; cursor:pointer; color:var(--es-text); }
+  .btn.create{ background: linear-gradient(90deg,var(--es-brand),var(--es-brand-2)); color:var(--es-bg); border-color:transparent; }
+  .btn.cancel{ background:transparent; color:var(--es-muted); }
   
   /* Helpers */
-  .muted{ color:var(--muted); font-size:0.95rem; }
+  .muted{ color:var(--es-muted); font-size:0.95rem; }
   
   /* Responsive: apila en móviles */
   @media (max-width:980px){
@@ -145,4 +153,3 @@
     .comparisonColumns{ grid-template-columns:1fr; }
     .aiColumn{ max-height: none; }
   }
-  

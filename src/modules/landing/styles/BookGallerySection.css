@@ -1,18 +1,14 @@
 /* Book Gallery Section Styles */
 
 :root {
-  --gallery-bg: #ffffff;
-  --gallery-title: #934F47;
-}
-
-.dark {
-  --gallery-bg: #1a1a1a;
-  --gallery-title: #e0e0e0;
+  --gallery-bg: var(--kolla-background);
+  --gallery-title: var(--kolla-text);
 }
 
 .book-gallery-section {
   padding: 2rem 1rem;
   background-color: var(--gallery-bg);
+  overflow-x: clip;
 }
 
 @media (max-width: 640px) {

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #F8F3EE 0%, #F4E8E4 100%);
+  background: linear-gradient(135deg, var(--kolla-background) 0%, var(--kolla-surface-soft) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,15 +29,15 @@
 .spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid #E8DED8;
-  border-top: 4px solid #A85F55;
+  border: 4px solid var(--kolla-border);
+  border-top: 4px solid var(--kolla-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 .loadingText {
   font-size: 1.25rem;
-  color: #A85F55;
+  color: var(--kolla-primary);
   font-weight: 500;
   margin: 0;
   animation: fadeInOut 2s infinite;

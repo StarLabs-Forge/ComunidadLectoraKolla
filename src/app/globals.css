@@ -43,13 +43,17 @@
   --radius-xl: 14px;
 }
 
-:root {
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
   /* Typography */
   --font-playfair: 'Playfair Display', serif;
   --font-dm-sans: 'DM Sans', sans-serif;
 
-  /* Kolla Palette - Terracota Editorial */
+  /* Kolla v2 - Terracota Editorial (claro) */
   --kolla-primary: #A85F55;
+  --kolla-primary-hover: #934F47;
   --kolla-primary-dark: #934F47;
   --kolla-primary-soft: #C98A7D;
   --kolla-accent: #D9A441;
@@ -58,91 +62,93 @@
   --kolla-background: #F8F3EE;
   --kolla-background-secondary: #F4E8E4;
   --kolla-surface: #FFFFFF;
+  --kolla-surface-soft: #F4E8E4;
+  --kolla-surface-raised: #FFFFFF;
 
   --kolla-text: #29282A;
-  --kolla-text-secondary: #5E5855;
+  --kolla-text-secondary: #6F6662;
   --kolla-neutral: #A69B96;
+  --kolla-border: #E8DED8;
 
   --kolla-success: #4F8068;
   --kolla-info: #527A9E;
   --kolla-warning: #D9A441;
   --kolla-error: #B85C5C;
 
-  --kolla-border: #E8DED8;
+  --kolla-shadow: 0 4px 18px rgba(41, 40, 42, 0.06);
+  --kolla-shadow-raised: 0 10px 30px rgba(41, 40, 42, 0.08);
+  --kolla-on-primary: #FFFFFF;
 
-  /* CSS Variables for Tailwind */
+  /* Tailwind / shadcn bridge */
   --radius: 12px;
-  --background: #F8F3EE;
-  --foreground: #29282A;
-  --card: #FFFFFF;
-  --card-foreground: #29282A;
-  --popover: #FFFFFF;
-  --popover-foreground: #29282A;
-  --primary: #A85F55;
-  --primary-foreground: #FFFFFF;
-  --secondary: #C98A7D;
+  --background: var(--kolla-background);
+  --foreground: var(--kolla-text);
+  --card: var(--kolla-surface);
+  --card-foreground: var(--kolla-text);
+  --popover: var(--kolla-surface-raised);
+  --popover-foreground: var(--kolla-text);
+  --primary: var(--kolla-primary);
+  --primary-foreground: var(--kolla-on-primary);
+  --secondary: var(--kolla-primary-soft);
   --secondary-foreground: #FFFFFF;
-  --muted: #F4E8E4;
-  --muted-foreground: #A69B96;
-  --accent: #D9A441;
+  --muted: var(--kolla-surface-soft);
+  --muted-foreground: var(--kolla-text-secondary);
+  --accent: var(--kolla-accent);
   --accent-foreground: #29282A;
-  --destructive: #B85C5C;
-  --border: #E8DED8;
-  --input: #FFFFFF;
-  --ring: #A85F55;
-  --chart-1: #A85F55;
-  --chart-2: #264653;
-  --chart-3: #D9A441;
-  --chart-4: #4F8068;
-  --chart-5: #527A9E;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #29282A;
-  --sidebar-primary: #A85F55;
+  --destructive: var(--kolla-error);
+  --border: var(--kolla-border);
+  --input: var(--kolla-surface);
+  --ring: var(--kolla-primary);
+  --chart-1: var(--kolla-primary);
+  --chart-2: var(--kolla-deep);
+  --chart-3: var(--kolla-accent);
+  --chart-4: var(--kolla-success);
+  --chart-5: var(--kolla-info);
+  --sidebar: var(--kolla-surface);
+  --sidebar-foreground: var(--kolla-text);
+  --sidebar-primary: var(--kolla-primary);
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #D9A441;
-  --sidebar-accent-foreground: #29282A;
-  --sidebar-border: #E8DED8;
-  --sidebar-ring: #A85F55;
+  --sidebar-accent: var(--kolla-surface-soft);
+  --sidebar-accent-foreground: var(--kolla-text);
+  --sidebar-border: var(--kolla-border);
+  --sidebar-ring: var(--kolla-primary);
 }
 
-.dark {
-  --kolla-primary: #C97869;
-  --kolla-background: #1E2021;
-  --kolla-surface: #29282A;
-  --kolla-text: #F8F3EE;
-  --kolla-border: #3A3935;
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
 
-  --background: #1E2021;
-  --foreground: #F8F3EE;
-  --card: #29282A;
-  --card-foreground: #F8F3EE;
-  --popover: #29282A;
-  --popover-foreground: #F8F3EE;
-  --primary: #C97869;
-  --primary-foreground: #1E2021;
-  --secondary: #C97869;
-  --secondary-foreground: #F8F3EE;
-  --muted: #3A3935;
-  --muted-foreground: #A69B96;
-  --accent: #D9A441;
-  --accent-foreground: #1E2021;
-  --destructive: #B85C5C;
-  --border: #3A3935;
-  --input: #3A3935;
-  --ring: #C97869;
-  --chart-1: #C97869;
-  --chart-2: #527A9E;
-  --chart-3: #D9A441;
-  --chart-4: #4F8068;
-  --chart-5: #527A9E;
-  --sidebar: #29282A;
-  --sidebar-foreground: #F8F3EE;
-  --sidebar-primary: #C97869;
-  --sidebar-primary-foreground: #F8F3EE;
-  --sidebar-accent: #D9A441;
-  --sidebar-accent-foreground: #1E2021;
-  --sidebar-border: #3A3935;
-  --sidebar-ring: #C97869;
+  /* Kolla v2 - Terracota Editorial (oscuro) */
+  --kolla-primary: #C4715E;
+  --kolla-primary-hover: #D18470;
+  --kolla-primary-dark: #D18470;
+  --kolla-primary-soft: #D79A86;
+  --kolla-accent: #E0B15F;
+  --kolla-deep: #3F6F83;
+
+  --kolla-background: #121212;
+  --kolla-background-secondary: #24201F;
+  --kolla-surface: #1E1E1E;
+  --kolla-surface-soft: #24201F;
+  --kolla-surface-raised: #2A2A2A;
+
+  --kolla-text: #F5F1E9;
+  --kolla-text-secondary: #B7ADA7;
+  --kolla-neutral: #A9A3A0;
+  --kolla-border: #3A3A3A;
+
+  --kolla-success: #5A987A;
+  --kolla-info: #6FA3C4;
+  --kolla-warning: #E0B15F;
+  --kolla-error: #E07B7B;
+
+  --kolla-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  --kolla-shadow-raised: 0 8px 24px rgba(0, 0, 0, 0.22);
+  --kolla-on-primary: #FFFFFF;
+
+  --secondary-foreground: #FFFFFF;
+  --accent-foreground: #121212;
+  --sidebar-primary-foreground: #FFFFFF;
 }
 
 @layer base {

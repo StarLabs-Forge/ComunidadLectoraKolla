@@ -1,9 +1,9 @@
 .login-card {
   position: relative;
   width: min(440px, 92vw);
-  background: var(--surface);
+  background: var(--kolla-surface);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--kolla-shadow-raised);
   overflow: hidden;
   padding: 28px;
   border: 1px solid rgba(168, 95, 85, 0.08);

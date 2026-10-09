@@ -1,8 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import Header from '../../../components/header/header';
 import Footer from '../../../components/footer/footer';
-import logoCompleto from '../../../../public/logoCompleto.png';
+import KollaLogo from '@/components/brand/KollaLogo';
 import styles from '../styles/AcercaDe.module.css';
 
 const AcercaDe: React.FC = () => {
@@ -12,13 +11,7 @@ const AcercaDe: React.FC = () => {
       <div className={styles.acercaDeContainer}>
         <div className={styles.heroSection}>
           <div className={styles.logoSection}>
-            <Image
-              src={logoCompleto}
-              alt="Comunidad Lectora Bolivia"
-              width={400}
-              height={120}
-              className={styles.logoCompleto}
-            />
+            <KollaLogo variant="horizontal" height={96} tagline className={styles.logoCompleto} />
           </div>
           <div className={styles.heroText}>
             <h1 className={styles.mainTitle}>Acerca de Comunidad Lectora Bolivia</h1>

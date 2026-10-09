@@ -3,9 +3,9 @@
   position: relative;
   overflow: hidden;
   border-radius: 1.25rem;
-  border: 1px solid #E8DED8;
-  background-color: #FFFFFF;
-  color: #29282A;
+  border: 1px solid var(--kolla-border);
+  background-color: var(--kolla-surface);
+  color: var(--kolla-text);
 }
 
 /* GRID INTERNO */
@@ -49,7 +49,7 @@
   height: 100%;
   display: grid;
   place-items: center;
-  color: #A69B96;
+  color: var(--kolla-neutral);
   font-size: 0.875rem;
 }
 
@@ -68,17 +68,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #29282A;
+  color: var(--kolla-text);
 }
 
 /* AUTOR */
 .book-author {
   font-size: 0.875rem;
-  color: #A69B96;
+  color: var(--kolla-neutral);
 }
 
 .book-author strong {
-  color: #5E5855;
+  color: var(--kolla-text-secondary);
 }
 
 /* TAGS */
@@ -94,15 +94,15 @@
   padding: 2px 8px;
   border-radius: 9999px;
   font-size: 0.6875rem;
-  border: 1px solid #E8DED8;
-  color: #5E5855;
-  background-color: #F4E8E4;
+  border: 1px solid var(--kolla-border);
+  color: var(--kolla-text-secondary);
+  background-color: var(--kolla-surface-soft);
 }
 
 .book-tag-primary {
-  background-color: #F4E8E4;
-  color: #A85F55;
-  border-color: #D9A441;
+  background-color: var(--kolla-surface-soft);
+  color: var(--kolla-primary);
+  border-color: var(--kolla-accent);
 }
 
 /* ACCIONES */
@@ -117,34 +117,34 @@
   padding: 0.5rem 0.75rem;
   border-radius: 0.75rem;
   font-size: 0.875rem;
-  border: 1px solid #E8DED8;
+  border: 1px solid var(--kolla-border);
   cursor: pointer;
   transition: background-color 0.18s ease, transform 0.12s ease;
-  color: #29282A;
+  color: var(--kolla-text);
 }
 
 /* BOTÓN PRIMARIO */
 .book-btn-primary {
-  background-color: #F4E8E4;
-  color: #A85F55;
-  border-color: #D9A441;
+  background-color: var(--kolla-surface-soft);
+  color: var(--kolla-primary);
+  border-color: var(--kolla-accent);
 }
 
 .book-btn-primary:hover {
-  background-color: #C98A7D;
+  background-color: var(--kolla-primary-soft);
   color: #FFFFFF;
   transform: translateY(-1px);
 }
 
 /* BOTÓN SECUNDARIO */
 .book-btn-secondary {
-  color: #5E5855;
-  background: #F8F3EE;
-  border-color: #E8DED8;
+  color: var(--kolla-text-secondary);
+  background: var(--kolla-background);
+  border-color: var(--kolla-border);
 }
 
 .book-btn-secondary:hover {
-  background-color: #F4E8E4;
+  background-color: var(--kolla-surface-soft);
   transform: translateY(-1px);
 }
 

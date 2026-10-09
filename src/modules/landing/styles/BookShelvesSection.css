@@ -1,20 +1,13 @@
 :root {
-  --book-shelves-bg: #f9f9f9;
-  --book-shelves-text: #934F47;
-  --book-shelves-highlight: #A85F55;
-  --book-shelves-shelf-bg: #934F47;
-  --book-shelves-shelf-border: #6F433D;
-}
-
-.dark {
-  --book-shelves-bg: #1a1a1a;
-  --book-shelves-text: #e0e0e0;
-  --book-shelves-highlight: #C98A7D;
-  --book-shelves-shelf-bg: #6F433D;
-  --book-shelves-shelf-border: #934F47;
+  --book-shelves-bg: var(--kolla-background-secondary);
+  --book-shelves-text: var(--kolla-text);
+  --book-shelves-highlight: var(--kolla-primary);
+  --book-shelves-shelf-bg: var(--kolla-primary-hover);
+  --book-shelves-shelf-border: color-mix(in srgb, var(--kolla-primary-hover) 70%, black);
 }
 
 .book-shelves-section {
+  overflow-x: clip;
   padding: 4rem 1rem;
   background-color: var(--book-shelves-bg);
   display: flex;

@@ -1,32 +1,21 @@
+:root {
+  --rd-accent-dark: var(--kolla-primary-hover);
+  --rd-shadow: var(--kolla-shadow);
+  --rd-border: var(--kolla-border);
+  --rd-accent: var(--kolla-primary);
+  --rd-glass: color-mix(in srgb, var(--kolla-surface) 30%, transparent);
+  --rd-muted: var(--kolla-text-secondary);
+  --rd-card: var(--kolla-surface);
+  --rd-text: var(--kolla-text);
+  --rd-bg: var(--kolla-background);
+}
+
 /* ================================
    MODO CLARO Y OSCURO
-================================ */
+================================ */:root { --progress: 0%; }
 
-:root {
-    --bg: #f5f7fa;
-    --card: #ffffff;
-    --text: #0f172a;
-    --muted: #6b7280;
-    --accent: #2563eb;
-    --accent-dark: #1d4ed8;
-    --glass: rgba(255, 255, 255, 0.27);
-    --border: #dbe3ef;
-    --shadow: 0 8px 20px rgba(0,0,0,0.06);
-    --progress: 0%;
-  }
   
   /* DARK THEME */
-  [data-theme="dark"] {
-    --bg: #0d1117;
-    --card: #161b22;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --accent: #60a5fa;
-    --accent-dark: #3b82f6;
-    --glass: rgba(255,255,255,0.08);
-    --border: #2e3540;
-    --shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
   
   /* ================================
      BASE
@@ -36,10 +25,10 @@
     max-width: 1100px;
     margin: 24px auto;
     padding: 22px;
-    background: var(--bg);
+    background: var(--rd-bg);
     border-radius: 14px;
-    box-shadow: var(--shadow);
-    color: var(--text);
+    box-shadow: var(--rd-shadow);
+    color: var(--rd-text);
     transition: background .25s ease, color .25s ease;
   }
   
@@ -57,7 +46,7 @@
   
   .leer-subtitle {
     font-size: 13px;
-    color: var(--muted);
+    color: var(--rd-muted);
     margin: 2px 0 0;
   }
   
@@ -67,15 +56,15 @@
   
   .glass {
     backdrop-filter: blur(12px);
-    background: var(--glass);
-    border: 1px solid var(--border);
+    background: var(--rd-glass);
+    border: 1px solid var(--rd-border);
     border-radius: 12px;
     padding: 8px 14px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--rd-shadow);
     transition: background .3s ease, transform .12s ease;
     cursor: pointer;
     font-weight: 600;
-    color: var(--text);
+    color: var(--rd-text);
   }
   
   .glass:hover {
@@ -89,13 +78,13 @@
   
   /* PRIMARY glass */
   .primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark)) !important;
+    background: linear-gradient(135deg, var(--rd-accent), var(--rd-accent-dark)) !important;
     color: white !important;
   }
   
   /* OUTLINE glass */
   .outline {
-    border: 1px dashed var(--accent-dark);
+    border: 1px dashed var(--rd-accent-dark);
   }
   
   /* ================================
@@ -124,7 +113,7 @@
     position: absolute;
     inset: 0;
     width: var(--progress);
-    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    background: linear-gradient(90deg, var(--rd-accent), var(--rd-accent-dark));
     transition: width .25s ease;
   }
   
@@ -147,16 +136,16 @@
   
   .leer-select-group label {
     font-size: 14px;
-    color: var(--muted);
+    color: var(--rd-muted);
     margin-right: 10px;
   }
   
   .leer-select-group select {
     padding: 8px 12px;
     border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
+    border: 1px solid var(--rd-border);
+    background: var(--rd-card);
+    color: var(--rd-text);
   }
   
   /* ================================
@@ -172,7 +161,7 @@
   .leer-aside {
     padding: 16px;
     border-radius: 12px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--rd-border);
     height: calc(60vh + 40px);
     display: flex;
     flex-direction: column;
@@ -198,7 +187,7 @@
   
   .leer-aside li button.active {
     background: rgba(90, 150, 255, 0.12);
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--rd-accent);
   }
   
   .leer-aside .num {
@@ -217,7 +206,7 @@
   .leer-reader {
     padding: 18px;
     border-radius: 12px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--rd-border);
     height: calc(60vh + 40px);
     display: flex;
     flex-direction: column;
@@ -239,10 +228,10 @@
     right: 20px;
     bottom: 20px;
     padding: 12px 16px;
-    background: var(--accent-dark);
+    background: var(--rd-accent-dark);
     color: white;
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--rd-shadow);
     font-weight: 700;
     z-index: 9999;
   }
@@ -257,4 +246,3 @@
       height: auto;
     }
   }
-  
